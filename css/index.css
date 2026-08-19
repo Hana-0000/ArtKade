@@ -1,10 +1,257 @@
 /* =====================================================
+   ART KADE - COMPLETE SHARED CSS
+===================================================== */
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+:root{
+    --primary:#d4af37;
+    --primary-dark:#b8941f;
+    --gold-light:#efc47d;
+    --gold-dark:#aa7835;
+
+    --bg:#07111F;
+    --navy:#021028;
+    --header:#091526;
+    --card:#101C2F;
+    --card-dark:#031228;
+
+    --text:#fff;
+    --gray:#bdbdbd;
+    --gray-light:#aeb8c8;
+
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body{
+    font-family:Tahoma,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.9;
+    overflow-x:hidden;
+}
+
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+a{
+    text-decoration:none;
+    color:var(--text);
+    transition:.3s;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+button,
+input,
+textarea{
+    font-family:inherit;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+    width:100%;
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:rgba(9,21,38,.95);
+    backdrop-filter:blur(10px);
+    box-shadow:0 2px 10px rgba(0,0,0,.25);
+}
+
+.navbar{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:8px 0;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    flex-shrink:0;
+}
+
+.logo img{
+    width:75px;
+    height:75px;
+    object-fit:cover;
+}
+
+.logo-text h2{
+    font-size:38px;
+    color:var(--text);
+}
+
+.logo-text span{
+    color:var(--primary);
+}
+
+
+/* =====================================================
+   MENU
+===================================================== */
+
+.menu{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:35px;
+}
+
+.menu li{
+    flex-shrink:0;
+}
+
+.menu li a{
+    position:relative;
+    display:inline-block;
+    font-size:15px;
+    white-space:nowrap;
+}
+
+.menu li a i{
+    color:var(--text);
+    transition:.3s;
+}
+
+.menu li a:hover,
+.menu li a:hover i,
+.menu a.active{
+    color:var(--primary);
+}
+
+.menu li a::after{
+    content:"";
+    position:absolute;
+    right:0;
+    bottom:-8px;
+    width:0;
+    height:2px;
+    background:var(--primary);
+    transition:.3s;
+}
+
+.menu li a:hover::after{
+    width:100%;
+}
+
+.menu li a.active i{
+    color:var(--text);
+}
+
+
+/* =====================================================
+   CART
+===================================================== */
+
+#cart-count{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:20px;
+    height:20px;
+    background:var(--primary);
+    color:#000;
+    border-radius:50%;
+    padding:2px 6px;
+    font-size:12px;
+    font-weight:bold;
+    margin-right:5px;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.btn{
+    display:inline-block;
+    background:var(--primary);
+    color:#000;
+    padding:14px 30px;
+    border-radius:10px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:var(--primary-dark);
+    transform:translateY(-4px);
+}
+
+.btn-outline{
+    background:transparent;
+    color:var(--primary);
+    border:2px solid var(--primary);
+}
+
+.btn-outline:hover{
+    background:var(--primary);
+    color:#000;
+}
+
+
+/* =====================================================
+   PAGE BACKGROUNDS
+===================================================== */
+
+.shop-page-bg,
+.product-page-bg,
+.payment-page-bg,
+.cart-page{
+    background:var(--navy);
+}
+
+
+/* =====================================================
    GENERAL SECTIONS
 ===================================================== */
 
-.section {
-    padding: 45px 0;
-    background: var(--card-dark);
+.section{
+    padding:45px 0;
+    background:var(--card-dark);
 }
 
 
@@ -12,28 +259,28 @@
    SECTION TITLE
 ===================================================== */
 
-.section-title {
-    text-align: center;
-    margin-bottom: 35px;
+.section-title{
+    text-align:center;
+    margin-bottom:35px;
 }
 
-.section-title h2 {
-    color: var(--primary);
-    font-size: 38px;
-    margin-bottom: 8px;
-    line-height: 1.5;
+.section-title h2{
+    color:var(--primary);
+    font-size:38px;
+    margin-bottom:8px;
+    line-height:1.5;
 }
 
-.section-title p {
-    color: var(--gray);
-    font-size: 17px;
-    margin: 0;
-    line-height: 1.8;
+.section-title p{
+    color:var(--gray);
+    font-size:17px;
+    margin:0;
+    line-height:1.8;
 }
 
-#contact .section-title h2 {
-    margin-top: 0;
-    margin-bottom: 35px;
+#contact .section-title h2{
+    margin-top:0;
+    margin-bottom:35px;
 }
 
 
@@ -41,83 +288,83 @@
    HERO
 ===================================================== */
 
-.hero {
-    min-height: 90vh;
-    display: flex;
-    align-items: center;
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
 }
 
-.hero-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 70px;
-    align-items: center;
+.hero-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
 }
 
-.hero h1 {
-    font-size: 58px;
-    line-height: 1.4;
-    margin-bottom: 20px;
+.hero h1{
+    font-size:58px;
+    line-height:1.4;
+    margin-bottom:20px;
 }
 
-.hero h1 span {
-    color: var(--primary);
+.hero h1 span{
+    color:var(--primary);
 }
 
-.hero p {
-    color: var(--gray);
-    margin-bottom: 35px;
-    line-height: 2;
+.hero p{
+    color:var(--gray);
+    margin-bottom:35px;
+    line-height:2;
 }
 
-.hero-buttons {
-    display: flex;
-    gap: 18px;
-    margin-bottom: 35px;
+.hero-buttons{
+    display:flex;
+    gap:18px;
+    margin-bottom:35px;
 }
 
-.hero-info {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+.hero-info{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
 }
 
-.hero-info div {
-    background: var(--card);
-    padding: 14px 20px;
-    border-radius: 12px;
-    box-shadow: var(--shadow);
+.hero-info div{
+    background:var(--card);
+    padding:14px 20px;
+    border-radius:12px;
+    box-shadow:var(--shadow);
 }
 
-.hero-info i {
-    color: var(--primary);
-    margin-left: 8px;
+.hero-info i{
+    color:var(--primary);
+    margin-left:8px;
 }
 
-.hero-image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hero-image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.hero-image img {
-    width: 100%;
-    max-width: 450px;
-    margin: auto;
-    border-radius: 20px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, .45);
-    animation: float 4s infinite ease-in-out;
+.hero-image img{
+    width:100%;
+    max-width:450px;
+    margin:auto;
+    border-radius:20px;
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+    animation:float 4s infinite ease-in-out;
 }
 
-@keyframes float {
+@keyframes float{
 
     0%,
-    100% {
-        transform: translateY(0);
+    100%{
+        transform:translateY(0);
     }
 
-    50% {
-        transform: translateY(-15px);
+    50%{
+        transform:translateY(-15px);
     }
 }
 
@@ -126,39 +373,39 @@
    FEATURES
 ===================================================== */
 
-.features {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
 }
 
-.feature {
-    background: var(--card);
-    padding: 35px 25px;
-    border-radius: 18px;
-    text-align: center;
-    box-shadow: var(--shadow);
-    transition: .3s;
+.feature{
+    background:var(--card);
+    padding:35px 25px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.3s;
 }
 
-.feature:hover {
-    transform: translateY(-10px);
+.feature:hover{
+    transform:translateY(-10px);
 }
 
-.feature i {
-    font-size: 45px;
-    color: var(--primary);
-    margin-bottom: 20px;
+.feature i{
+    font-size:45px;
+    color:var(--primary);
+    margin-bottom:20px;
 }
 
-.feature h3 {
-    font-size: 22px;
-    margin-bottom: 15px;
+.feature h3{
+    font-size:22px;
+    margin-bottom:15px;
 }
 
-.feature p {
-    color: var(--gray);
-    line-height: 1.9;
+.feature p{
+    color:var(--gray);
+    line-height:1.9;
 }
 
 
@@ -166,32 +413,32 @@
    ABOUT
 ===================================================== */
 
-.about-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    text-align: center;
+.about-content{
+    display:grid;
+    grid-template-columns:1fr;
+    text-align:center;
 }
 
-.about-text {
-    max-width: 850px;
-    margin: auto;
+.about-text{
+    max-width:850px;
+    margin:auto;
 }
 
-.about-text h2 {
-    color: var(--primary);
-    font-size: 36px;
-    margin-bottom: 15px;
+.about-text h2{
+    color:var(--primary);
+    font-size:36px;
+    margin-bottom:15px;
 }
 
-.about-text p {
-    color: var(--gray);
-    text-align: justify;
-    margin-bottom: 35px;
-    line-height: 2.1;
+.about-text p{
+    color:var(--gray);
+    text-align:justify;
+    margin-bottom:35px;
+    line-height:2.1;
 }
 
-#about {
-    scroll-margin-top: 100px;
+#about{
+    scroll-margin-top:100px;
 }
 
 
@@ -199,32 +446,51 @@
    INSTAGRAM
 ===================================================== */
 
-.instagram-box {
-    background: linear-gradient(
+/*
+   باکس اینستاگرام عمداً کوتاه‌تر شده
+   تا کشیده و خیلی بلند نباشد.
+*/
+
+.instagram-box{
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+
+    background:linear-gradient(
         135deg,
         #8a3ab9,
         #e95950,
         #fccc63
     );
-    border-radius: 22px;
-    text-align: center;
-    padding: 50px 30px;
-    box-shadow: var(--shadow);
+
+    border-radius:22px;
+
+    text-align:center;
+
+    padding:32px 25px;
+
+    box-shadow:var(--shadow);
+
+    min-height:auto;
 }
 
-.instagram-box i {
-    font-size: 70px;
-    margin-bottom: 20px;
+.instagram-box i{
+    font-size:52px;
+    margin-bottom:12px;
 }
 
-.instagram-box h3 {
-    font-size: 30px;
-    margin-bottom: 15px;
+.instagram-box h3{
+    font-size:27px;
+    margin-bottom:10px;
 }
 
-.instagram-box p {
-    margin-bottom: 30px;
-    line-height: 2;
+.instagram-box p{
+    margin-bottom:18px;
+    line-height:1.9;
+}
+
+.instagram-box .btn{
+    padding:11px 24px;
 }
 
 
@@ -232,55 +498,221 @@
    CONTACT
 ===================================================== */
 
-.contact-box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+.contact-box{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
 }
 
-.contact-box div {
-    position: relative;
-    background: var(--card);
-    padding: 35px;
-    border-radius: 18px;
-    text-align: center;
-    box-shadow: var(--shadow);
-    transition: .3s;
+.contact-box div{
+    position:relative;
+    background:var(--card);
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:var(--shadow);
+    transition:.3s;
 }
 
-.contact-box div:hover {
-    transform: translateY(-8px);
+.contact-box div:hover{
+    transform:translateY(-8px);
 }
 
-.contact-box i {
-    color: var(--primary);
-    font-size: 40px;
-    margin-bottom: 15px;
-    position: relative;
-    z-index: 2;
+.contact-box i{
+    color:var(--primary);
+    font-size:40px;
+    margin-bottom:15px;
+    position:relative;
+    z-index:2;
 }
 
-.contact-box p {
-    position: relative;
-    z-index: 2;
+.contact-box p{
+    position:relative;
+    z-index:2;
 }
 
-.contact-link {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-    text-decoration: none;
-    z-index: 5;
+.contact-link{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:block;
+    text-decoration:none;
+    z-index:5;
 }
 
 .contact-box div > i,
-.contact-box div > p {
-    pointer-events: none;
+.contact-box div > p{
+    pointer-events:none;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer.footer{
+    width:100%;
+    background:var(--navy);
+    color:var(--text);
+
+    padding:40px 6% 18px;
+
+    margin:0;
+
+    direction:rtl;
+}
+
+.footer-content{
+    width:100%;
+    max-width:1200px;
+    margin:0 auto;
+
+    display:flex;
+    flex-direction:row;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:35px;
+}
+
+
+/* =====================================================
+   FOOTER BRAND
+===================================================== */
+
+.footer-brand{
+    flex:1;
+    min-width:0;
+
+    text-align:right;
+}
+
+.footer-brand h2{
+    font-size:25px;
+    margin:0 0 6px;
+    color:var(--text);
+}
+
+.footer-brand h2 span{
+    color:var(--primary);
+}
+
+.footer-brand p{
+    color:var(--gray-light);
+    font-size:12px;
+    margin:0;
+    line-height:1.8;
+}
+
+
+/* =====================================================
+   FOOTER LINKS
+===================================================== */
+
+.footer-content nav{
+    flex:1.3;
+    min-width:0;
+}
+
+.footer-content nav .menu{
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    gap:25px;
+
+    margin:0;
+    padding:0;
+
+    list-style:none;
+}
+
+.footer-content nav .menu li{
+    flex-shrink:0;
+}
+
+.footer-content nav .menu li a{
+    color:var(--text);
+    font-size:12px;
+    white-space:nowrap;
+}
+
+.footer-content nav .menu li a:hover,
+.footer-content nav .menu li a.active{
+    color:var(--primary);
+}
+
+
+/* =====================================================
+   FOOTER SOCIAL
+===================================================== */
+
+.footer-social{
+    flex:1;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:flex-start;
+
+    gap:10px;
+}
+
+.footer-social a{
+    width:34px;
+    height:34px;
+
+    border:1px solid var(--primary);
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:var(--primary);
+
+    font-size:12px;
+
+    transition:.3s;
+}
+
+.footer-social a:hover{
+    background:var(--primary);
+    color:var(--navy);
+
+    border-color:var(--primary);
+
+    transform:translateY(-3px);
+}
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom{
+    width:100%;
+    max-width:1200px;
+
+    margin:25px auto 0;
+
+    padding-top:12px;
+
+    border-top:1px solid rgba(212,175,55,.6);
+
+    text-align:center;
+
+    color:var(--gray);
+
+    font-size:10px;
+
+    line-height:1.8;
 }
 
 
@@ -288,50 +720,76 @@
    TABLET
 ===================================================== */
 
-@media (max-width: 1000px) {
+@media(max-width:1000px){
 
-    .hero {
-        min-height: auto;
-        padding: 65px 0;
+    .navbar{
+        gap:20px;
     }
 
-    .hero-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 35px;
+    .logo-text h2{
+        font-size:32px;
     }
 
-    .hero h1 {
-        font-size: 43px;
+    .logo img{
+        width:65px;
+        height:65px;
     }
 
-    .hero p {
-        font-size: 15px;
+    .menu{
+        gap:22px;
     }
 
-    .features {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 15px;
+    .menu li a{
+        font-size:14px;
     }
 
-    .feature {
-        padding: 25px 12px;
+    .hero{
+        min-height:auto;
+        padding:65px 0;
     }
 
-    .feature h3 {
-        font-size: 18px;
+    .hero-content{
+        grid-template-columns:1fr 1fr;
+        gap:35px;
     }
 
-    .feature p {
-        font-size: 12px;
+    .hero h1{
+        font-size:43px;
     }
 
-    .contact-box {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
+    .hero p{
+        font-size:15px;
     }
 
-    .contact-box div {
-        padding: 25px 12px;
+    .features{
+        grid-template-columns:repeat(4,1fr);
+        gap:15px;
+    }
+
+    .feature{
+        padding:25px 12px;
+    }
+
+    .feature h3{
+        font-size:18px;
+    }
+
+    .feature p{
+        font-size:12px;
+    }
+
+    .contact-box{
+        grid-template-columns:repeat(3,1fr);
+        gap:15px;
+    }
+
+    .contact-box div{
+        padding:25px 12px;
+    }
+
+    .instagram-box{
+        max-width:800px;
+        padding:30px 22px;
     }
 }
 
@@ -340,210 +798,495 @@
    MOBILE / TABLET
 ===================================================== */
 
-@media (max-width: 768px) {
+@media(max-width:768px){
 
-    .section {
-        padding: 40px 0;
+    .container{
+        width:94%;
+    }
+
+
+    /* ================= HEADER ================= */
+
+    header{
+        position:sticky;
+        top:0;
+    }
+
+    .navbar{
+        width:94%;
+        max-width:1200px;
+        margin:auto;
+
+        display:flex;
+        flex-direction:row;
+
+        align-items:center;
+        justify-content:space-between;
+
+        gap:10px;
+        padding:7px 0;
+    }
+
+
+    /* ================= LOGO ================= */
+
+    .logo{
+        display:flex;
+        align-items:center;
+
+        gap:7px;
+
+        flex-shrink:0;
+    }
+
+    .logo img{
+        width:48px;
+        height:48px;
+    }
+
+    .logo-text h2{
+        font-size:24px;
+        line-height:1.2;
+    }
+
+
+    /* ================= MENU ================= */
+
+    .menu{
+        width:auto;
+        flex:1;
+
+        display:flex;
+        align-items:center;
+
+        justify-content:flex-end;
+
+        gap:16px;
+
+        flex-wrap:nowrap;
+        overflow:hidden;
+
+        min-width:0;
+    }
+
+    .menu li{
+        flex-shrink:0;
+    }
+
+    .menu li a{
+        font-size:12px;
+        white-space:nowrap;
+    }
+
+    .menu li a::after{
+        bottom:-4px;
+    }
+
+
+    /* ================= CART ================= */
+
+    #cart-count{
+        min-width:17px;
+        height:17px;
+
+        padding:1px 5px;
+
+        font-size:9px;
+
+        margin-right:2px;
+    }
+
+
+    /* ================= SECTIONS ================= */
+
+    .section{
+        padding:40px 0;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero{
+        min-height:auto;
+        padding:35px 0 45px;
+    }
+
+    .hero-content{
+        display:grid;
+
+        grid-template-columns:1.1fr .9fr;
+
+        gap:15px;
+
+        align-items:center;
+
+        text-align:right;
+    }
+
+    .hero-text{
+        min-width:0;
+        order:1;
+    }
+
+    .hero-image{
+        min-width:0;
+        width:100%;
+        order:2;
+    }
+
+    .hero h1{
+        font-size:24px;
+        line-height:1.6;
+        margin-bottom:12px;
+    }
+
+    .hero p{
+        font-size:12px;
+        line-height:1.9;
+        margin-bottom:18px;
+    }
+
+    .hero-buttons{
+        display:flex;
+        flex-direction:row;
+
+        justify-content:flex-start;
+
+        gap:6px;
+
+        margin-bottom:15px;
+
+        flex-wrap:nowrap;
+    }
+
+    .hero-buttons .btn{
+        padding:8px 10px;
+        font-size:10px;
+        white-space:nowrap;
+    }
+
+    .hero-image img{
+        width:100%;
+        max-width:100%;
+        border-radius:16px;
+    }
+
+
+    /* ================= TITLE ================= */
+
+    .section-title{
+        margin-bottom:25px;
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .section-title p{
+        font-size:14px;
+    }
+
+
+    /* ================= FEATURES ================= */
+
+    .features{
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+        gap:10px;
+    }
+
+    .feature{
+        padding:20px 7px;
+        border-radius:14px;
+        min-width:0;
+    }
+
+    .feature i{
+        font-size:32px;
+        margin-bottom:10px;
+    }
+
+    .feature h3{
+        font-size:14px;
+        line-height:1.7;
+        margin-bottom:7px;
+    }
+
+    .feature p{
+        font-size:9px;
+        line-height:1.8;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about{
+        display:none;
+    }
+
+    .about-content{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .about-text{
+        width:94%;
+        max-width:850px;
+        margin:auto;
+    }
+
+    .about-text h2{
+        font-size:30px;
+        text-align:center;
+    }
+
+    .about-text p{
+        font-size:12px;
+        line-height:2;
+        text-align:center;
+        margin-bottom:25px;
+    }
+
+
+    /* ================= INSTAGRAM ================= */
+
+    .instagram{
+        padding-top:30px;
+        padding-bottom:35px;
+    }
+
+    .instagram .section-title{
+        margin-bottom:20px;
+    }
+
+    .instagram .section-title h2{
+        font-size:25px;
+        margin-bottom:7px;
+    }
+
+    .instagram .section-title p{
+        font-size:11px;
+    }
+
+    /*
+       قبلاً min-height:255px داشت.
+       همین باعث کشیده شدن زیاد می‌شد.
+       حالا ارتفاع طبیعی و جمع‌وجور است.
+    */
+
+    .instagram-box{
+        width:92%;
+        max-width:700px;
+
+        margin:0 auto;
+
+        padding:28px 18px;
+
+        border-radius:16px;
+
+        min-height:0;
+
+        display:flex;
+        flex-direction:column;
+
+        align-items:center;
+        justify-content:center;
+    }
+
+    .instagram-box i{
+        font-size:45px;
+        margin-bottom:10px;
+    }
+
+    .instagram-box h3{
+        font-size:20px;
+        margin-bottom:8px;
+    }
+
+    .instagram-box p{
+        font-size:10px;
+        line-height:1.8;
+        margin-bottom:16px;
+    }
+
+    .instagram-box .btn{
+        padding:9px 17px;
+        font-size:10px;
+    }
+
+
+    /* ================= CONTACT ================= */
+
+    .contact{
+        padding-top:30px;
+        padding-bottom:35px;
+    }
+
+    .contact .section-title{
+        margin-bottom:22px;
+    }
+
+    .contact .section-title h2{
+        font-size:27px;
+        margin-bottom:7px;
+    }
+
+    .contact .section-title p{
+        font-size:11px;
+    }
+
+    .contact-box{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:10px;
+    }
+
+    .contact-box div{
+        padding:24px 7px;
+        border-radius:13px;
+        min-width:0;
+    }
+
+    .contact-box i{
+        font-size:30px;
+        margin-bottom:10px;
+    }
+
+    .contact-box p{
+        font-size:9px;
+        white-space:nowrap;
     }
 
 
     /* =================================================
-       HERO
+       FOOTER MOBILE
     ================================================= */
 
-    .hero {
-        min-height: auto;
-        padding: 35px 0 45px;
+    footer.footer{
+        width:100%;
+
+        padding:28px 5% 12px;
+
+        margin:0;
+
+        overflow:hidden;
     }
 
-    .hero-content {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 15px;
-        align-items: center;
-        text-align: right;
-    }
+    .footer-content{
+        width:100%;
 
-    .hero-text {
-        min-width: 0;
-        order: 1;
-    }
+        display:flex;
+        flex-direction:row;
 
-    .hero-image {
-        min-width: 0;
-        width: 100%;
-        order: 2;
-    }
+        align-items:center;
+        justify-content:space-between;
 
-    .hero h1 {
-        font-size: 24px;
-        line-height: 1.6;
-        margin-bottom: 12px;
-    }
-
-    .hero p {
-        font-size: 12px;
-        line-height: 1.9;
-        margin-bottom: 18px;
-    }
-
-    .hero-buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        gap: 6px;
-        margin-bottom: 15px;
-        flex-wrap: nowrap;
-    }
-
-    .hero-buttons .btn {
-        padding: 8px 10px;
-        font-size: 10px;
-        white-space: nowrap;
-    }
-
-    .hero-image img {
-        width: 100%;
-        max-width: 100%;
-        border-radius: 16px;
+        gap:10px;
     }
 
 
-    /* =================================================
-       SECTION TITLE
-    ================================================= */
+    /* BRAND */
 
-    .section-title {
-        margin-bottom: 25px;
+    .footer-brand{
+        flex:1;
+
+        min-width:0;
+
+        text-align:right;
     }
 
-    .section-title h2 {
-        font-size: 30px;
+    .footer-brand h2{
+        font-size:17px;
+        line-height:1.5;
+
+        margin-bottom:2px;
+
+        white-space:nowrap;
     }
 
-    .section-title p {
-        font-size: 14px;
-    }
+    .footer-brand p{
+        font-size:7px;
 
+        line-height:1.7;
 
-    /* =================================================
-       FEATURES
-       4 کارت کنار هم
-    ================================================= */
-
-    .features {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 10px;
-    }
-
-    .feature {
-        padding: 20px 7px;
-        border-radius: 14px;
-        min-width: 0;
-    }
-
-    .feature i {
-        font-size: 32px;
-        margin-bottom: 10px;
-    }
-
-    .feature h3 {
-        font-size: 14px;
-        line-height: 1.7;
-        margin-bottom: 7px;
-    }
-
-    .feature p {
-        font-size: 9px;
-        line-height: 1.8;
+        white-space:nowrap;
     }
 
 
-    /* =================================================
-       ABOUT
-    ================================================= */
+    /* LINKS */
 
-    .about-content {
-        grid-template-columns: 1fr;
-        text-align: center;
+    .footer-content nav{
+        flex:1.4;
+
+        min-width:0;
     }
 
-    .about-text {
-        width: 94%;
-        max-width: 850px;
-        margin: auto;
+    .footer-content nav .menu{
+        width:100%;
+
+        display:flex;
+
+        justify-content:center;
+        align-items:center;
+
+        gap:10px;
+
+        overflow:visible;
+
+        flex-wrap:nowrap;
     }
 
-    .about-text h2 {
-        font-size: 30px;
-        text-align: center;
+    .footer-content nav .menu li{
+        flex-shrink:1;
+        min-width:0;
     }
 
-    .about-text p {
-        font-size: 12px;
-        line-height: 2;
-        text-align: center;
-        margin-bottom: 25px;
-    }
+    .footer-content nav .menu li a{
+        font-size:7px;
 
-
-    /* =================================================
-       INSTAGRAM
-    ================================================= */
-
-    .instagram-box {
-        width: 100%;
-        padding: 40px 20px;
-        border-radius: 18px;
-    }
-
-    .instagram-box i {
-        font-size: 55px;
-        margin-bottom: 15px;
-    }
-
-    .instagram-box h3 {
-        font-size: 22px;
-    }
-
-    .instagram-box p {
-        font-size: 13px;
-        line-height: 2;
-        margin-bottom: 25px;
-    }
-
-    .instagram-box .btn {
-        font-size: 11px;
-        padding: 10px 18px;
+        white-space:nowrap;
     }
 
 
-    /* =================================================
-       CONTACT
-       3 کارت کنار هم
-    ================================================= */
+    /* SOCIAL */
 
-    .contact-box {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+    .footer-social{
+        flex:.8;
+
+        display:flex;
+
+        align-items:center;
+        justify-content:flex-start;
+
+        gap:5px;
+
+        min-width:0;
     }
 
-    .contact-box div {
-        padding: 25px 8px;
-        border-radius: 14px;
-        min-width: 0;
+    .footer-social a{
+        width:27px;
+        height:27px;
+
+        flex-shrink:0;
+
+        font-size:9px;
     }
 
-    .contact-box i {
-        font-size: 30px;
-        margin-bottom: 10px;
-    }
 
-    .contact-box p {
-        font-size: 10px;
-        white-space: nowrap;
+    /* BOTTOM */
+
+    .footer-bottom{
+        width:100%;
+
+        margin:20px auto 0;
+
+        padding-top:9px;
+
+        font-size:7px;
+
+        line-height:1.7;
+
+        white-space:normal;
     }
 }
 
@@ -552,170 +1295,241 @@
    MOBILE
 ===================================================== */
 
-@media (max-width: 500px) {
+@media(max-width:500px){
 
-    .section {
-        padding: 35px 0;
+    .container{
+        width:92%;
     }
 
 
-    /* =================================================
-       HERO
-    ================================================= */
+    /* HEADER */
 
-    .hero {
-        padding: 30px 0 35px;
+    .navbar{
+        width:94%;
+        padding:6px 0;
+        gap:8px;
     }
 
-    .hero-content {
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 10px;
+    .logo{
+        gap:5px;
     }
 
-    .hero h1 {
-        font-size: 20px;
-        line-height: 1.6;
+    .logo img{
+        width:42px;
+        height:42px;
     }
 
-    .hero p {
-        font-size: 10px;
-        line-height: 1.8;
-        margin-bottom: 15px;
+    .logo-text h2{
+        font-size:20px;
     }
 
-    .hero-buttons {
-        gap: 5px;
+    .menu{
+        gap:12px;
+        justify-content:flex-end;
     }
 
-    .hero-buttons .btn {
-        padding: 7px 9px;
-        font-size: 9px;
-    }
-
-    .hero-image img {
-        width: 100%;
-        max-width: 100%;
-        border-radius: 13px;
+    .menu li a{
+        font-size:10px;
     }
 
 
-    /* =================================================
-       TITLE
-    ================================================= */
+    /* CART */
 
-    .section-title {
-        margin-bottom: 22px;
-    }
+    #cart-count{
+        min-width:15px;
+        height:15px;
 
-    .section-title h2 {
-        font-size: 25px;
-    }
+        padding:1px 4px;
 
-    .section-title p {
-        font-size: 12px;
+        font-size:8px;
     }
 
 
-    /* =================================================
-       FEATURES
-       همچنان 4 کارت کنار هم
-    ================================================= */
+    /* BUTTONS */
 
-    .features {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 7px;
-    }
-
-    .feature {
-        padding: 16px 5px;
-        border-radius: 12px;
-    }
-
-    .feature i {
-        font-size: 27px;
-        margin-bottom: 8px;
-    }
-
-    .feature h3 {
-        font-size: 11px;
-        line-height: 1.7;
-        margin-bottom: 6px;
-    }
-
-    .feature p {
-        font-size: 7px;
-        line-height: 1.8;
+    .btn{
+        padding:12px 22px;
+        font-size:14px;
     }
 
 
-    /* =================================================
-       ABOUT
-    ================================================= */
+    /* HERO */
 
-    .about-text {
-        width: 92%;
+    .hero{
+        padding:30px 0 35px;
     }
 
-    .about-text h2 {
-        font-size: 25px;
+    .hero-content{
+        grid-template-columns:1.1fr .9fr;
+        gap:10px;
     }
 
-    .about-text p {
-        font-size: 11px;
-        line-height: 2.1;
-        text-align: center;
+    .hero h1{
+        font-size:20px;
+        line-height:1.6;
     }
 
-
-    /* =================================================
-       INSTAGRAM
-    ================================================= */
-
-    .instagram-box {
-        padding: 32px 15px;
-        border-radius: 16px;
+    .hero p{
+        font-size:10px;
+        line-height:1.8;
+        margin-bottom:15px;
     }
 
-    .instagram-box i {
-        font-size: 48px;
+    .hero-buttons{
+        gap:5px;
     }
 
-    .instagram-box h3 {
-        font-size: 19px;
+    .hero-buttons .btn{
+        padding:7px 9px;
+        font-size:9px;
     }
 
-    .instagram-box p {
-        font-size: 11px;
-        line-height: 1.9;
-    }
-
-    .instagram-box .btn {
-        padding: 9px 15px;
-        font-size: 10px;
+    .hero-image img{
+        width:100%;
+        border-radius:13px;
     }
 
 
-    /* =================================================
-       CONTACT
-       3 کارت کنار هم
-    ================================================= */
+    /* TITLE */
 
-    .contact-box {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 7px;
+    .section-title{
+        margin-bottom:22px;
     }
 
-    .contact-box div {
-        padding: 20px 5px;
-        border-radius: 12px;
+    .section-title h2{
+        font-size:25px;
     }
 
-    .contact-box i {
-        font-size: 25px;
+    .section-title p{
+        font-size:12px;
     }
 
-    .contact-box p {
-        font-size: 9px;
+
+    /* FEATURES */
+
+    .features{
+        grid-template-columns:repeat(4,1fr);
+        gap:7px;
+    }
+
+    .feature{
+        padding:16px 5px;
+        border-radius:12px;
+    }
+
+    .feature i{
+        font-size:27px;
+        margin-bottom:8px;
+    }
+
+    .feature h3{
+        font-size:11px;
+        line-height:1.7;
+        margin-bottom:6px;
+    }
+
+    .feature p{
+        font-size:7px;
+        line-height:1.8;
+    }
+
+
+    /* INSTAGRAM */
+
+    .instagram{
+        padding-top:25px;
+        padding-bottom:30px;
+    }
+
+    .instagram-box{
+        width:94%;
+        padding:23px 12px;
+        border-radius:14px;
+    }
+
+    .instagram-box i{
+        font-size:38px;
+        margin-bottom:7px;
+    }
+
+    .instagram-box h3{
+        font-size:17px;
+        margin-bottom:6px;
+    }
+
+    .instagram-box p{
+        font-size:9px;
+        line-height:1.8;
+        margin-bottom:12px;
+    }
+
+    .instagram-box .btn{
+        padding:8px 14px;
+        font-size:9px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-box{
+        grid-template-columns:repeat(3,1fr);
+        gap:7px;
+    }
+
+    .contact-box div{
+        padding:20px 5px;
+        border-radius:12px;
+    }
+
+    .contact-box i{
+        font-size:25px;
+    }
+
+    .contact-box p{
+        font-size:9px;
+    }
+
+
+    /* FOOTER */
+
+    footer.footer{
+        padding:25px 4% 10px;
+    }
+
+    .footer-content{
+        gap:6px;
+    }
+
+    .footer-brand h2{
+        font-size:15px;
+    }
+
+    .footer-brand p{
+        font-size:6px;
+    }
+
+    .footer-content nav .menu{
+        gap:7px;
+    }
+
+    .footer-content nav .menu li a{
+        font-size:6.5px;
+    }
+
+    .footer-social{
+        gap:4px;
+    }
+
+    .footer-social a{
+        width:25px;
+        height:25px;
+        font-size:8px;
+    }
+
+    .footer-bottom{
+        margin-top:17px;
+        padding-top:8px;
+        font-size:6.5px;
     }
 }
 
@@ -724,242 +1538,198 @@
    VERY SMALL MOBILE
 ===================================================== */
 
-@media (max-width: 360px) {
+@media(max-width:360px){
 
-    /* =================================================
-       HERO
-    ================================================= */
-
-    .hero {
-        padding: 25px 0 30px;
+    .navbar{
+        width:96%;
+        gap:4px;
     }
 
-    .hero-content {
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 8px;
+    .logo{
+        gap:4px;
     }
 
-    .hero h1 {
-        font-size: 17px;
-        line-height: 1.6;
+    .logo img{
+        width:35px;
+        height:35px;
     }
 
-    .hero p {
-        font-size: 9px;
-        line-height: 1.8;
+    .logo-text h2{
+        font-size:16px;
     }
 
-    .hero-buttons {
-        gap: 4px;
+    .menu{
+        gap:7px;
     }
 
-    .hero-buttons .btn {
-        padding: 6px 7px;
-        font-size: 8px;
-    }
-
-    .hero-image img {
-        width: 100%;
-        border-radius: 11px;
+    .menu li a{
+        font-size:8px;
     }
 
 
-    /* =================================================
-       FEATURES
-    ================================================= */
+    /* CART */
 
-    .features {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 5px;
-    }
+    #cart-count{
+        min-width:13px;
+        height:13px;
 
-    .feature {
-        padding: 14px 3px;
-        border-radius: 10px;
-    }
+        font-size:7px;
 
-    .feature i {
-        font-size: 23px;
-        margin-bottom: 6px;
-    }
-
-    .feature h3 {
-        font-size: 9px;
-        line-height: 1.6;
-    }
-
-    .feature p {
-        font-size: 6px;
-        line-height: 1.7;
+        padding:0 3px;
     }
 
 
-    /* =================================================
-       ABOUT
-    ================================================= */
+    /* HERO */
 
-    .about-text {
-        width: 94%;
+    .hero{
+        padding:25px 0 30px;
     }
 
-    .about-text h2 {
-        font-size: 22px;
+    .hero-content{
+        grid-template-columns:1.1fr .9fr;
+        gap:8px;
     }
 
-    .about-text p {
-        font-size: 9px;
-        line-height: 2;
+    .hero h1{
+        font-size:17px;
+        line-height:1.6;
     }
 
-
-    /* =================================================
-       INSTAGRAM
-    ================================================= */
-
-    .instagram-box {
-        padding: 28px 12px;
-        border-radius: 14px;
+    .hero p{
+        font-size:9px;
+        line-height:1.8;
     }
 
-    .instagram-box i {
-        font-size: 42px;
+    .hero-buttons{
+        gap:4px;
     }
 
-    .instagram-box h3 {
-        font-size: 17px;
+    .hero-buttons .btn{
+        padding:6px 7px;
+        font-size:8px;
     }
 
-    .instagram-box p {
-        font-size: 9px;
+    .hero-image img{
+        width:100%;
+        border-radius:11px;
     }
 
 
-    /* =================================================
-       CONTACT
-    ================================================= */
+    /* FEATURES */
 
-    .contact-box {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 5px;
+    .features{
+        grid-template-columns:repeat(4,1fr);
+        gap:5px;
     }
 
-    .contact-box div {
-        padding: 17px 3px;
-        border-radius: 10px;
+    .feature{
+        padding:14px 3px;
+        border-radius:10px;
     }
 
-    .contact-box i {
-        font-size: 22px;
+    .feature i{
+        font-size:23px;
+        margin-bottom:6px;
     }
 
-    .contact-box p {
-        font-size: 8px;
-    }
-}
-/* =====================================================
-   MOBILE - REMOVE ABOUT SECTION
-===================================================== */
-
-@media (max-width: 768px) {
-
-    /* در موبایل بخش درباره ما نمایش داده نشود */
-    .about {
-        display: none;
+    .feature h3{
+        font-size:9px;
+        line-height:1.6;
     }
 
-    /* ================= INSTAGRAM ================= */
-
-    .instagram {
-        padding-top: 35px;
-        padding-bottom: 45px;
-    }
-
-    .instagram .section-title {
-        margin-bottom: 25px;
-    }
-
-    .instagram .section-title h2 {
-        font-size: 25px;
-        margin-bottom: 8px;
-    }
-
-    .instagram .section-title p {
-        font-size: 11px;
-    }
-
-    .instagram-box {
-        width: 100%;
-        padding: 45px 20px;
-        border-radius: 17px;
-        min-height: 255px;
-
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .instagram-box i {
-        font-size: 55px;
-        margin-bottom: 15px;
-    }
-
-    .instagram-box h3 {
-        font-size: 21px;
-        margin-bottom: 12px;
-    }
-
-    .instagram-box p {
-        font-size: 11px;
-        line-height: 2;
-        margin-bottom: 22px;
-    }
-
-    .instagram-box .btn {
-        padding: 10px 18px;
-        font-size: 10px;
+    .feature p{
+        font-size:6px;
+        line-height:1.7;
     }
 
 
-    /* ================= CONTACT ================= */
+    /* INSTAGRAM */
 
-    .contact {
-        padding-top: 35px;
-        padding-bottom: 40px;
+    .instagram-box{
+        width:95%;
+        padding:20px 9px;
+        border-radius:12px;
     }
 
-    .contact .section-title {
-        margin-bottom: 25px;
+    .instagram-box i{
+        font-size:34px;
     }
 
-    .contact .section-title h2 {
-        font-size: 27px;
-        margin-bottom: 8px;
+    .instagram-box h3{
+        font-size:15px;
     }
 
-    .contact .section-title p {
-        font-size: 11px;
+    .instagram-box p{
+        font-size:8px;
+        margin-bottom:10px;
     }
 
-    .contact-box {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 10px;
+    .instagram-box .btn{
+        padding:7px 12px;
+        font-size:8px;
     }
 
-    .contact-box div {
-        padding: 24px 7px;
-        border-radius: 13px;
-        min-width: 0;
+
+    /* CONTACT */
+
+    .contact-box{
+        grid-template-columns:repeat(3,1fr);
+        gap:5px;
     }
 
-    .contact-box i {
-        font-size: 30px;
-        margin-bottom: 10px;
+    .contact-box div{
+        padding:17px 3px;
+        border-radius:10px;
     }
 
-    .contact-box p {
-        font-size: 9px;
-        white-space: nowrap;
+    .contact-box i{
+        font-size:22px;
+    }
+
+    .contact-box p{
+        font-size:8px;
+    }
+
+
+    /* FOOTER */
+
+    footer.footer{
+        padding:22px 3% 9px;
+    }
+
+    .footer-content{
+        gap:4px;
+    }
+
+    .footer-brand h2{
+        font-size:13px;
+    }
+
+    .footer-brand p{
+        font-size:5.5px;
+    }
+
+    .footer-content nav .menu{
+        gap:5px;
+    }
+
+    .footer-content nav .menu li a{
+        font-size:5.5px;
+    }
+
+    .footer-social{
+        gap:3px;
+    }
+
+    .footer-social a{
+        width:23px;
+        height:23px;
+        font-size:7px;
+    }
+
+    .footer-bottom{
+        margin-top:15px;
+        padding-top:7px;
+        font-size:5.5px;
     }
 }

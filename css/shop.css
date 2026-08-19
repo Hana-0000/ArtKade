@@ -501,3 +501,140 @@
     }
 
 }
+/* =========================
+   نسخه موبایل فروشگاه
+   ========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* هدر */
+    header {
+        padding: 15px 20px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* لوگو */
+    .logo {
+        transform: scale(1.15);
+    }
+
+    /* منو */
+    nav ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    /* سرچ */
+    .search-container {
+        width: 90%;
+        margin: 25px auto 35px;
+    }
+
+    .search-container input {
+        width: 100%;
+        height: 55px;
+        font-size: 16px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    /* عنوان فروشگاه */
+    .shop-title {
+        text-align: center;
+        margin-bottom: 35px;
+    }
+
+    .shop-title h1 {
+        font-size: 30px;
+    }
+
+    .shop-title p {
+        font-size: 17px;
+    }
+
+    /* =========================
+       محصولات - دو ستونه
+       ========================= */
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+
+        width: calc(100% - 24px);
+        margin: 0 auto;
+    }
+
+    .product {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    /* عکس محصولات */
+    .product img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* قسمت اطلاعات کارت */
+    .product-info {
+        padding: 12px 9px;
+    }
+
+    .product-info h3 {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .product-info p {
+        font-size: 11px;
+        line-height: 1.7;
+    }
+
+    /* قیمت */
+    .price {
+        font-size: 14px;
+    }
+
+    /* قیمت قبلی */
+    .old-price {
+        font-size: 11px;
+    }
+
+    /* دکمه افزودن به سبد */
+    .add-to-cart {
+        width: 100%;
+        height: 38px;
+        font-size: 11px;
+        padding: 0 5px;
+    }
+
+    /* تخفیف / جدید */
+    .badge {
+        font-size: 10px;
+        padding: 7px 9px;
+    }
+}

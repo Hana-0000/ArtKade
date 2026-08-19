@@ -1,8 +1,13 @@
 /* =====================================================
-   SHARED STYLES - ART KADE
+   ART KADE - SHARED STYLE
+   نسخه کامل و مرتب
 ===================================================== */
 
-/* RESET */
+
+/* =====================================================
+   RESET
+===================================================== */
+
 *{
     margin:0;
     padding:0;
@@ -18,14 +23,18 @@ html{
     --primary-dark:#b8941f;
     --gold-light:#efc47d;
     --gold-dark:#aa7835;
+
     --bg:#07111F;
     --navy:#021028;
     --header:#091526;
+
     --card:#101C2F;
     --card-dark:#031228;
-    --text:#fff;
+
+    --text:#ffffff;
     --gray:#bdbdbd;
     --gray-light:#aeb8c8;
+
     --shadow:0 10px 30px rgba(0,0,0,.35);
 }
 
@@ -35,7 +44,7 @@ html{
 ===================================================== */
 
 body{
-    font-family:Tahoma,sans-serif;
+    font-family:Tahoma, sans-serif;
     background:var(--bg);
     color:var(--text);
     line-height:1.9;
@@ -67,7 +76,7 @@ textarea{
 .container{
     width:90%;
     max-width:1200px;
-    margin:auto;
+    margin:0 auto;
 }
 
 
@@ -80,16 +89,22 @@ header{
     position:sticky;
     top:0;
     z-index:999;
-    background:rgba(9,21,38,.95);
+
+    background:rgba(9,21,38,.96);
+
     backdrop-filter:blur(10px);
-    box-shadow:0 2px 10px rgba(0,0,0,.25);
+
+    box-shadow:
+        0 2px 10px rgba(0,0,0,.25);
 }
 
 .navbar{
     width:100%;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
+
     padding:8px 0;
 }
 
@@ -101,18 +116,23 @@ header{
 .logo{
     display:flex;
     align-items:center;
+
     gap:15px;
+
     flex-shrink:0;
 }
 
 .logo img{
     width:75px;
     height:75px;
+
     object-fit:cover;
 }
 
 .logo-text h2{
     font-size:38px;
+    line-height:1.2;
+
     color:var(--text);
 }
 
@@ -122,14 +142,16 @@ header{
 
 
 /* =====================================================
-   MENU
+   HEADER MENU
 ===================================================== */
 
 .menu{
     list-style:none;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     gap:35px;
 }
 
@@ -139,7 +161,9 @@ header{
 
 .menu li a{
     position:relative;
+
     display:inline-block;
+
     font-size:15px;
     white-space:nowrap;
 }
@@ -155,14 +179,22 @@ header{
     color:var(--primary);
 }
 
+
+/* underline */
+
 .menu li a::after{
     content:"";
+
     position:absolute;
+
     right:0;
     bottom:-8px;
+
     width:0;
     height:2px;
+
     background:var(--primary);
+
     transition:.3s;
 }
 
@@ -181,16 +213,23 @@ header{
 
 #cart-count{
     display:inline-flex;
+
     align-items:center;
     justify-content:center;
+
     min-width:20px;
     height:20px;
+
     background:var(--primary);
     color:#000;
+
     border-radius:50%;
+
     padding:2px 6px;
+
     font-size:12px;
     font-weight:bold;
+
     margin-right:5px;
 }
 
@@ -201,22 +240,30 @@ header{
 
 .btn{
     display:inline-block;
+
     background:var(--primary);
     color:#000;
+
     padding:14px 30px;
+
     border-radius:10px;
+
     font-weight:bold;
+
     transition:.3s;
 }
 
 .btn:hover{
     background:var(--primary-dark);
+
     transform:translateY(-4px);
 }
 
 .btn-outline{
     background:transparent;
+
     color:var(--primary);
+
     border:2px solid var(--primary);
 }
 
@@ -244,29 +291,64 @@ header{
 
 footer.footer{
     width:100%;
+
     background:var(--navy);
     color:var(--text);
-    padding:45px 8% 20px;
+
+    padding:40px 6% 15px;
+
     margin:0;
+
     direction:rtl;
 }
 
+
+/* =====================================================
+   FOOTER CONTENT
+===================================================== */
+
 .footer-content{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:40px;
+    width:100%;
     max-width:1200px;
-    margin:auto;
+
+    margin:0 auto;
+
+    display:grid;
+
+    /*
+       ستون راست = برند
+       ستون وسط = منو
+       ستون چپ = شبکه اجتماعی
+    */
+
+    grid-template-columns:
+        1fr
+        1.3fr
+        1fr;
+
+    align-items:center;
+
+    gap:30px;
 }
+
+
+/* =====================================================
+   FOOTER BRAND
+===================================================== */
 
 .footer-brand{
     text-align:right;
+
+    min-width:0;
 }
 
 .footer-brand h2{
     font-size:28px;
-    margin:0 0 8px;
+
+    line-height:1.3;
+
+    margin:0 0 6px;
+
     color:var(--text);
 }
 
@@ -276,64 +358,123 @@ footer.footer{
 
 .footer-brand p{
     color:var(--gray-light);
-    font-size:14px;
+
+    font-size:13px;
+
     margin:0;
+
+    white-space:nowrap;
 }
 
-.footer-links{
+
+/* =====================================================
+   FOOTER NAV
+===================================================== */
+
+.footer-content nav{
+    width:100%;
+}
+
+.footer-content nav .menu{
+    width:100%;
+
     display:flex;
+
     align-items:center;
     justify-content:center;
+
     gap:28px;
+
+    margin:0;
+    padding:0;
+
+    list-style:none;
 }
 
-.footer-links a{
-    color:var(--gray-light);
-    text-decoration:none;
-    font-size:15px;
-    transition:.3s;
+.footer-content nav .menu li{
+    flex-shrink:0;
 }
 
-.footer-links a:hover{
+.footer-content nav .menu li a{
+    position:relative;
+
+    color:var(--text);
+
+    font-size:13px;
+
+    white-space:nowrap;
+}
+
+.footer-content nav .menu li a:hover,
+.footer-content nav .menu li a.active{
     color:var(--primary);
 }
+
+
+/* =====================================================
+   FOOTER SOCIAL
+===================================================== */
 
 .footer-social{
     display:flex;
+
     align-items:center;
-    gap:15px;
+
+    justify-content:flex-start;
+
+    gap:10px;
+
+    direction:ltr;
 }
 
 .footer-social a{
-    width:42px;
-    height:42px;
+    width:34px;
+    height:34px;
+
     border:1px solid var(--primary);
+
     border-radius:50%;
+
     display:flex;
-    justify-content:center;
+
     align-items:center;
+    justify-content:center;
+
     color:var(--primary);
-    text-decoration:none;
-    font-size:16px;
+
+    font-size:13px;
+
     transition:.3s;
 }
 
 .footer-social a:hover{
     background:var(--primary);
+
     color:var(--navy);
-    border-color:var(--primary);
+
     transform:translateY(-3px);
 }
+
+
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
 
 .footer-bottom{
     width:100%;
     max-width:1200px;
-    margin:35px auto 0;
-    padding-top:18px;
+
+    margin:30px auto 0;
+
+    padding-top:14px;
+
     border-top:1px solid var(--primary);
+
     text-align:center;
+
     color:var(--gray);
-    font-size:13px;
+
+    font-size:11px;
 }
 
 
@@ -342,6 +483,8 @@ footer.footer{
 ===================================================== */
 
 @media(max-width:1000px){
+
+    /* HEADER */
 
     .navbar{
         gap:20px;
@@ -363,21 +506,59 @@ footer.footer{
     .menu li a{
         font-size:14px;
     }
+
+
+    /* FOOTER */
+
+    footer.footer{
+        padding-left:5%;
+        padding-right:5%;
+    }
+
+    .footer-content{
+        gap:20px;
+    }
+
+    .footer-content nav .menu{
+        gap:18px;
+    }
+
+    .footer-content nav .menu li a{
+        font-size:12px;
+    }
+
+    .footer-brand h2{
+        font-size:25px;
+    }
+
+    .footer-brand p{
+        font-size:11px;
+    }
+
+    .footer-social{
+        gap:8px;
+    }
 }
 
 
 /* =====================================================
-   TABLET / MOBILE
+   MOBILE / TABLET
 ===================================================== */
 
 @media(max-width:768px){
+
+    /* =================================================
+       GENERAL
+    ================================================= */
 
     .container{
         width:94%;
     }
 
 
-    /* ================= HEADER ================= */
+    /* =================================================
+       HEADER
+    ================================================= */
 
     header{
         position:sticky;
@@ -386,25 +567,33 @@ footer.footer{
 
     .navbar{
         width:94%;
-        max-width:1200px;
-        margin:auto;
+
+        margin:0 auto;
 
         display:flex;
+
         flex-direction:row;
+
         align-items:center;
         justify-content:space-between;
 
         gap:10px;
+
         padding:7px 0;
     }
 
 
-    /* ================= LOGO ================= */
+    /* =================================================
+       LOGO
+    ================================================= */
 
     .logo{
         display:flex;
+
         align-items:center;
+
         gap:7px;
+
         flex-shrink:0;
     }
 
@@ -419,75 +608,189 @@ footer.footer{
     }
 
 
-    /* ================= MENU ================= */
+    /* =================================================
+       HEADER MENU
+    ================================================= */
 
-    .menu{
-        width:auto;
+    .navbar nav{
+        min-width:0;
         flex:1;
+    }
+
+    .navbar nav .menu{
+        width:100%;
 
         display:flex;
+
         align-items:center;
 
-        /* انتقال منو به سمت راست */
         justify-content:flex-end;
 
-        /* فاصله بیشتر بین نوشته ها */
         gap:16px;
 
         flex-wrap:nowrap;
+
         overflow:hidden;
+
         min-width:0;
     }
 
-    .menu li{
+    .navbar nav .menu li{
         flex-shrink:0;
     }
 
-    .menu li a{
+    .navbar nav .menu li a{
         font-size:12px;
+
         white-space:nowrap;
     }
 
-    .menu li a::after{
+    .navbar nav .menu li a::after{
         bottom:-4px;
     }
 
 
-    /* ================= CART ================= */
+    /* =================================================
+       CART
+    ================================================= */
 
     #cart-count{
         min-width:17px;
         height:17px;
+
         padding:1px 5px;
+
         font-size:9px;
+
         margin-right:2px;
     }
 
 
-    /* ================= FOOTER ================= */
+    /* =================================================
+       FOOTER
+    ================================================= */
 
     footer.footer{
-        padding-left:5%;
-        padding-right:5%;
+        width:100%;
+
+        padding:30px 5% 12px;
+
+        margin:0;
     }
+
+    /*
+       مهم:
+       در موبایل هم سه قسمت کنار هم باقی می‌مانند
+       مثل تصویری که فرستادی.
+    */
 
     .footer-content{
-        flex-direction:column;
-        text-align:center;
-        gap:25px;
+        width:100%;
+
+        display:grid;
+
+        grid-template-columns:
+            1fr
+            1.4fr
+            1fr;
+
+        align-items:center;
+
+        gap:10px;
     }
+
+
+    /* BRAND - RIGHT */
 
     .footer-brand{
-        text-align:center;
+        text-align:right;
+
+        min-width:0;
     }
 
-    .footer-links{
-        flex-wrap:wrap;
-        gap:15px 20px;
+    .footer-brand h2{
+        font-size:18px;
+
+        line-height:1.3;
+
+        margin-bottom:3px;
     }
+
+    .footer-brand p{
+        font-size:8px;
+
+        white-space:nowrap;
+
+        color:var(--gray-light);
+    }
+
+
+    /* NAV - CENTER */
+
+    .footer-content nav{
+        width:100%;
+
+        min-width:0;
+    }
+
+    .footer-content nav .menu{
+        width:100%;
+
+        display:flex;
+
+        align-items:center;
+        justify-content:center;
+
+        gap:12px;
+
+        flex-wrap:nowrap;
+
+        overflow:hidden;
+    }
+
+    .footer-content nav .menu li{
+        flex-shrink:0;
+    }
+
+    .footer-content nav .menu li a{
+        font-size:8px;
+
+        white-space:nowrap;
+    }
+
+
+    /* SOCIAL - LEFT */
 
     .footer-social{
-        justify-content:center;
+        display:flex;
+
+        align-items:center;
+
+        justify-content:flex-start;
+
+        gap:6px;
+
+        direction:ltr;
+    }
+
+    .footer-social a{
+        width:28px;
+        height:28px;
+
+        font-size:10px;
+    }
+
+
+    /* FOOTER BOTTOM */
+
+    .footer-bottom{
+        width:100%;
+
+        margin:22px auto 0;
+
+        padding-top:10px;
+
+        font-size:8px;
     }
 }
 
@@ -503,16 +806,22 @@ footer.footer{
     }
 
 
-    /* ================= HEADER ================= */
+    /* =================================================
+       HEADER
+    ================================================= */
 
     .navbar{
         width:94%;
+
         padding:6px 0;
+
         gap:8px;
     }
 
 
-    /* ================= LOGO ================= */
+    /* =================================================
+       LOGO
+    ================================================= */
 
     .logo{
         gap:5px;
@@ -528,81 +837,118 @@ footer.footer{
     }
 
 
-    /* ================= MENU ================= */
+    /* =================================================
+       HEADER MENU
+    ================================================= */
 
-    .menu{
+    .navbar nav .menu{
         gap:12px;
+
         justify-content:flex-end;
     }
 
-    .menu li a{
+    .navbar nav .menu li a{
         font-size:10px;
     }
 
-    .menu li a::after{
+    .navbar nav .menu li a::after{
         bottom:-3px;
+
         height:1px;
     }
 
 
-    /* ================= CART ================= */
+    /* =================================================
+       CART
+    ================================================= */
 
     #cart-count{
         min-width:15px;
         height:15px;
+
         padding:1px 4px;
+
         font-size:8px;
     }
 
 
-    /* ================= BUTTONS ================= */
+    /* =================================================
+       BUTTON
+    ================================================= */
 
     .btn{
         padding:12px 22px;
+
         font-size:14px;
     }
 
 
-    /* ================= FOOTER ================= */
+    /* =================================================
+       FOOTER
+    ================================================= */
 
     footer.footer{
-        padding:35px 5% 18px;
+        padding:28px 4% 10px;
     }
 
     .footer-content{
-        gap:20px;
+        grid-template-columns:
+            1fr
+            1.4fr
+            1fr;
+
+        gap:6px;
     }
 
+
+    /* BRAND */
+
     .footer-brand h2{
-        font-size:22px;
+        font-size:16px;
+
+        white-space:nowrap;
     }
 
     .footer-brand p{
-        font-size:11px;
+        font-size:7px;
+
+        white-space:nowrap;
     }
 
-    .footer-links{
-        gap:10px 15px;
+
+    /* NAV */
+
+    .footer-content nav .menu{
+        gap:8px;
     }
 
-    .footer-links a{
-        font-size:11px;
+    .footer-content nav .menu li a{
+        font-size:7px;
     }
+
+
+    /* SOCIAL */
 
     .footer-social{
-        gap:9px;
+        gap:4px;
     }
 
     .footer-social a{
-        width:36px;
-        height:36px;
-        font-size:13px;
+        width:25px;
+        height:25px;
+
+        font-size:9px;
     }
 
+
+    /* BOTTOM */
+
     .footer-bottom{
-        margin-top:20px;
-        padding-top:13px;
-        font-size:10px;
+        margin-top:18px;
+
+        padding-top:9px;
+
+        font-size:7px;
     }
 }
 
@@ -615,8 +961,12 @@ footer.footer{
 
     .navbar{
         width:95%;
+
         gap:5px;
     }
+
+
+    /* LOGO */
 
     .logo{
         gap:4px;
@@ -632,46 +982,81 @@ footer.footer{
     }
 
 
-    /* ================= MENU ================= */
+    /* MENU */
 
-    .menu{
+    .navbar nav .menu{
         gap:9px;
-        justify-content:flex-end;
     }
 
-    .menu li a{
+    .navbar nav .menu li a{
         font-size:9px;
     }
 
 
-    /* ================= CART ================= */
+    /* CART */
 
     #cart-count{
         min-width:14px;
         height:14px;
+
         font-size:7px;
+
         padding:1px 3px;
     }
 
 
-    /* ================= FOOTER ================= */
+    /* FOOTER */
 
-    .footer-links{
-        gap:8px 12px;
+    footer.footer{
+        padding-left:3%;
+        padding-right:3%;
     }
 
-    .footer-links a{
-        font-size:10px;
+    .footer-content{
+        gap:4px;
+    }
+
+
+    /* BRAND */
+
+    .footer-brand h2{
+        font-size:14px;
+    }
+
+    .footer-brand p{
+        font-size:6px;
+    }
+
+
+    /* NAV */
+
+    .footer-content nav .menu{
+        gap:6px;
+    }
+
+    .footer-content nav .menu li a{
+        font-size:6px;
+    }
+
+
+    /* SOCIAL */
+
+    .footer-social{
+        gap:3px;
     }
 
     .footer-social a{
-        width:34px;
-        height:34px;
-        font-size:12px;
+        width:23px;
+        height:23px;
+
+        font-size:8px;
     }
 
+
+    /* BOTTOM */
+
     .footer-bottom{
-        font-size:9px;
+        font-size:6px;
     }
 }
 
@@ -684,8 +1069,12 @@ footer.footer{
 
     .navbar{
         width:96%;
+
         gap:4px;
     }
+
+
+    /* LOGO */
 
     .logo img{
         width:35px;
@@ -697,45 +1086,59 @@ footer.footer{
     }
 
 
-    /* ================= MENU ================= */
+    /* MENU */
 
-    .menu{
+    .navbar nav .menu{
         gap:7px;
-        justify-content:flex-end;
     }
 
-    .menu li a{
+    .navbar nav .menu li a{
         font-size:8px;
     }
 
 
-    /* ================= CART ================= */
+    /* CART */
 
     #cart-count{
         min-width:13px;
         height:13px;
+
         font-size:7px;
+
         padding:0 3px;
     }
 
 
-    /* ================= FOOTER ================= */
+    /* FOOTER */
 
-    .footer-links{
-        gap:7px 10px;
+    .footer-brand h2{
+        font-size:13px;
     }
 
-    .footer-links a{
-        font-size:9px;
+    .footer-brand p{
+        font-size:5px;
+    }
+
+    .footer-content nav .menu{
+        gap:5px;
+    }
+
+    .footer-content nav .menu li a{
+        font-size:5.5px;
+    }
+
+    .footer-social{
+        gap:2px;
     }
 
     .footer-social a{
-        width:32px;
-        height:32px;
-        font-size:11px;
+        width:21px;
+        height:21px;
+
+        font-size:7px;
     }
 
     .footer-bottom{
-        font-size:8px;
+        font-size:5.5px;
     }
 }

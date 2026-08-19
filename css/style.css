@@ -29,7 +29,11 @@ html{
     --shadow:0 10px 30px rgba(0,0,0,.35);
 }
 
-/* BODY */
+
+/* =====================================================
+   BODY
+===================================================== */
+
 body{
     font-family:Tahoma,sans-serif;
     background:var(--bg);
@@ -38,7 +42,11 @@ body{
     overflow-x:hidden;
 }
 
-/* GENERAL */
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
 a{
     text-decoration:none;
     color:var(--text);
@@ -418,11 +426,14 @@ footer.footer{
         flex:1;
         display:flex;
         align-items:center;
-        justify-content:flex-start;
 
-        gap:7px;
+        /* انتقال منو به سمت راست */
+        justify-content:flex-end;
+
+        /* فاصله بیشتر بین گزینه‌ها */
+        gap:12px;
+
         flex-wrap:nowrap;
-
         overflow:hidden;
         min-width:0;
     }
@@ -519,7 +530,8 @@ footer.footer{
     /* ================= MENU ================= */
 
     .menu{
-        gap:5px;
+        gap:9px;
+        justify-content:flex-end;
     }
 
     .menu li a{
@@ -614,13 +626,20 @@ footer.footer{
         font-size:18px;
     }
 
+
+    /* ================= MENU ================= */
+
     .menu{
-        gap:4px;
+        gap:7px;
+        justify-content:flex-end;
     }
 
     .menu li a{
         font-size:9px;
     }
+
+
+    /* ================= CART ================= */
 
     #cart-count{
         min-width:14px;
@@ -628,6 +647,9 @@ footer.footer{
         font-size:7px;
         padding:1px 3px;
     }
+
+
+    /* ================= FOOTER ================= */
 
     .footer-links{
         gap:10px 13px;
@@ -659,13 +681,20 @@ footer.footer{
         font-size:16px;
     }
 
+
+    /* ================= MENU ================= */
+
     .menu{
-        gap:3px;
+        gap:6px;
+        justify-content:flex-end;
     }
 
     .menu li a{
         font-size:8px;
     }
+
+
+    /* ================= CART ================= */
 
     #cart-count{
         min-width:13px;
@@ -673,6 +702,9 @@ footer.footer{
         font-size:7px;
         padding:0 3px;
     }
+
+
+    /* ================= FOOTER ================= */
 
     .footer-links{
         gap:8px 11px;

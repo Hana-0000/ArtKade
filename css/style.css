@@ -394,7 +394,7 @@ footer.footer{
         align-items:center;
         justify-content:space-between;
 
-        gap:12px;
+        gap:10px;
         padding:7px 0;
     }
 
@@ -424,14 +424,15 @@ footer.footer{
     .menu{
         width:auto;
         flex:1;
+
         display:flex;
         align-items:center;
 
         /* انتقال منو به سمت راست */
         justify-content:flex-end;
 
-        /* فاصله بیشتر بین گزینه‌ها */
-        gap:12px;
+        /* فاصله بیشتر بین نوشته ها */
+        gap:16px;
 
         flex-wrap:nowrap;
         overflow:hidden;
@@ -530,7 +531,7 @@ footer.footer{
     /* ================= MENU ================= */
 
     .menu{
-        gap:9px;
+        gap:12px;
         justify-content:flex-end;
     }
 
@@ -568,36 +569,40 @@ footer.footer{
         padding:35px 5% 18px;
     }
 
+    .footer-content{
+        gap:20px;
+    }
+
     .footer-brand h2{
-        font-size:24px;
+        font-size:22px;
     }
 
     .footer-brand p{
-        font-size:13px;
+        font-size:11px;
     }
 
     .footer-links{
-        gap:12px 16px;
+        gap:10px 15px;
     }
 
     .footer-links a{
-        font-size:13px;
+        font-size:11px;
     }
 
     .footer-social{
-        gap:10px;
+        gap:9px;
     }
 
     .footer-social a{
-        width:38px;
-        height:38px;
-        font-size:14px;
+        width:36px;
+        height:36px;
+        font-size:13px;
     }
 
     .footer-bottom{
-        margin-top:25px;
-        padding-top:15px;
-        font-size:11px;
+        margin-top:20px;
+        padding-top:13px;
+        font-size:10px;
     }
 }
 
@@ -630,7 +635,7 @@ footer.footer{
     /* ================= MENU ================= */
 
     .menu{
-        gap:7px;
+        gap:9px;
         justify-content:flex-end;
     }
 
@@ -652,11 +657,21 @@ footer.footer{
     /* ================= FOOTER ================= */
 
     .footer-links{
-        gap:10px 13px;
+        gap:8px 12px;
     }
 
     .footer-links a{
+        font-size:10px;
+    }
+
+    .footer-social a{
+        width:34px;
+        height:34px;
         font-size:12px;
+    }
+
+    .footer-bottom{
+        font-size:9px;
     }
 }
 
@@ -665,7 +680,7 @@ footer.footer{
    VERY SMALL MOBILE
 ===================================================== */
 
-@media(max-width:320px){
+@media(max-width:360px){
 
     .navbar{
         width:96%;
@@ -685,7 +700,7 @@ footer.footer{
     /* ================= MENU ================= */
 
     .menu{
-        gap:6px;
+        gap:7px;
         justify-content:flex-end;
     }
 
@@ -707,10 +722,20 @@ footer.footer{
     /* ================= FOOTER ================= */
 
     .footer-links{
-        gap:8px 11px;
+        gap:7px 10px;
     }
 
     .footer-links a{
+        font-size:9px;
+    }
+
+    .footer-social a{
+        width:32px;
+        height:32px;
         font-size:11px;
+    }
+
+    .footer-bottom{
+        font-size:8px;
     }
 }

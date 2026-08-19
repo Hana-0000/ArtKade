@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تکمیل سفارش | Art Kade">
+    <title>تکمیل سفارش | Art Kade</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/payment.css">
+</head>
+<body class="payment-page">
+     <!-- HEADER -->
+<header>
+    <div class="container navbar">
+        <a href="index.html"
+           class="logo"
+           aria-label="صفحه اصلی Art Kade">
+            <img src="img/logo.jpg"
+                 alt="لوگوی Art Kade">
+            <div class="logo-text">
+                <h2>
+                    Art <span>Kade</span>
+                </h2>
+            </div>
+        </a>
+        <nav aria-label="منوی اصلی">
+            <ul class="menu">
+                <li>
+                    <a href="index.html">
+                        خانه
+                    </a>
+                </li>
+                <li>
+                    <a href="shop.html">
+                        فروشگاه
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#about">
+                        درباره ما
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html#contact">
+                        ارتباط با ما
+                    </a>
+                </li>
+                <li>
+                    <a href="cart.html"
+                       aria-label="سبد خرید">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count">
+                            0
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+     <!-- PAYMENT -->
+<main>
+<section class="payment-section">
+    <div class="payment-title">
+        <h1>
+            تکمیل سفارش
+        </h1>
+        <p>
+            اطلاعات سفارش خود را وارد کنید
+        </p>
+    </div>
+    <div class="payment-wrapper">
+     <!-- اطلاعات ارسال -->
+        <div class="payment-card">
+            <h2>
+                <i class="fa-solid fa-location-dot"></i>
+                اطلاعات ارسال
+            </h2>
+            <form id="payment-form">
+                <div class="payment-form-grid">
+                    <div class="payment-field">
+                        <label>
+                            نام و نام خانوادگی
+                            <span>*</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="fullname"
+                            placeholder="نام و نام خانوادگی"
+                            required>
+                    </div>
+                    <div class="payment-field">
+                        <label>
+                            شماره موبایل
+                            <span>*</span>
+                        </label>
+                        <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        inputmode="numeric"
+                        maxlength="11"
+                        pattern="[0-9۰-۹]{11}"
+                        placeholder=" 09123456789"
+                        required
+                        >
+                    </div>
+                    <!-- استان  -->
+                    <div class="payment-field">
+                        <label>
+                            استان
+                            <span>*</span>
+                        </label>
+                        <select id="province" required>
+                            <option value="">
+                                انتخاب استان
+                            </option>
+                            <option value="آذربایجان شرقی">
+                                آذربایجان شرقی
+                            </option>
+                            <option value="آذربایجان غربی">
+                                آذربایجان غربی
+                            </option>
+                            <option value="اردبیل">
+                                اردبیل
+                            </option>
+                            <option value="اصفهان">
+                                اصفهان
+                            </option>
+                            <option value="البرز">
+                                البرز
+                            </option>
+                            <option value="ایلام">
+                                ایلام
+                            </option>
+                            <option value="بوشهر">
+                                بوشهر
+                            </option>
+                            <option value="تهران">
+                                تهران
+                            </option>
+                            <option value="چهارمحال و بختیاری">
+                                چهارمحال و بختیاری
+                            </option>
+                            <option value="خراسان جنوبی">
+                                خراسان جنوبی
+                            </option>
+                            <option value="خراسان رضوی">
+                                خراسان رضوی
+                            </option>
+                            <option value="خراسان شمالی">
+                                خراسان شمالی
+                            </option>
+                            <option value="خوزستان">
+                                خوزستان
+                            </option>
+                            <option value="زنجان">
+                                زنجان
+                            </option>
+                            <option value="سمنان">
+                                سمنان
+                            </option>
+                            <option value="سیستان و بلوچستان">
+                                سیستان و بلوچستان
+                            </option>
+                            <option value="فارس">
+                                فارس
+                            </option>
+                            <option value="قزوین">
+                                قزوین
+                            </option>
+                            <option value="قم">
+                                قم
+                            </option>
+                            <option value="کردستان">
+                                کردستان
+                            </option>
+                            <option value="کرمان">
+                                کرمان
+                            </option>
+                            <option value="کرمانشاه">
+                                کرمانشاه
+                            </option>
+                            <option value="کهگیلویه و بویراحمد">
+                                کهگیلویه و بویراحمد
+                            </option>
+                            <option value="گلستان">
+                                گلستان
+                            </option>
+                            <option value="گیلان">
+                                گیلان
+                            </option>
+                            <option value="لرستان">
+                                لرستان
+                            </option>
+                            <option value="مازندران">
+                                مازندران
+                            </option>
+                            <option value="مرکزی">
+                                مرکزی
+                            </option>
+                            <option value="هرمزگان">
+                                هرمزگان
+                            </option>
+                            <option value="همدان">
+                                همدان
+                            </option>
+                            <option value="یزد">
+                                یزد
+                            </option>
+                        </select>
+                    </div>
+                    <!-- شهر  -->
+                    <div class="payment-field">
+                        <label>
+                            شهر
+                            <span>*</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="city"
+                            placeholder="نام شهر"
+                            required>
+                    </div>
+                    <!-- آدرس  -->
+                    <div class="payment-field full">
+                        <label>
+                            آدرس کامل
+                            <span>*</span>
+                        </label>
+                        <textarea
+                            id="address"
+                            placeholder="خیابان، کوچه، پلاک، واحد..."
+                            required></textarea>
+                    </div>
+                     <!-- کد پستی  -->
+                    <div class="payment-field">
+                        <label>
+                            کد پستی
+                            <span>*</span>
+                        </label>
+                        <input
+                            type="text"
+                            id="postalCode"
+                            maxlength="10"
+                            placeholder="کد پستی ۱۰ رقمی"
+                            required>
+                    </div>
+                </div>
+                         <!-- روش ارسال -->
+                <div class="shipping-title">
+                    روش ارسال
+                </div>
+                <div class="shipping-options">
+                    <label class="shipping-option">
+                        <input
+                            type="radio"
+                            name="shipping"
+                            value="0"
+                            checked>
+                        <div class="shipping-text">
+                            ارسال عادی
+                            <small>
+                                ارسال با پست
+                            </small>
+                        </div>
+                        <span class="shipping-price">
+                            رایگان
+                        </span>
+                    </label>
+                    <label class="shipping-option">
+                        <input
+                            type="radio"
+                            name="shipping"
+                            value="50000">
+                        <div class="shipping-text">
+                            ارسال سریع
+                            <small>
+                                تحویل سریع‌تر سفارش
+                            </small>
+                        </div>
+                        <span class="shipping-price">
+                            ۵۰,۰۰۰ تومان
+                        </span>
+                    </label>
+                </div>
+            </form>
+        </div>
+         <!-- خلاصه سفارش -->
+        <div class="payment-card">
+            <h2>
+                <i class="fa-solid fa-bag-shopping"></i>
+                سفارش شما
+            </h2>
+            <div id="payment-products"></div>
+            <div class="payment-summary">
+                <div class="summary-row">
+                    <span>
+                        جمع محصولات
+                    </span>
+                    <strong id="subtotal">
+                        ۰ تومان
+                    </strong>
+                </div>
+                <div class="summary-row">
+                    <span>
+                        هزینه ارسال
+                    </span>
+                    <strong id="shipping-total">
+                        رایگان
+                    </strong>
+                </div>
+                <div class="summary-row final">
+                    <span>
+                        مبلغ نهایی
+                    </span>
+                    <strong id="final-total">
+                        ۰ تومان
+                    </strong>
+                </div>
+            </div>
+            <button
+                type="button"
+                id="payment-button"
+                class="payment-button">
+                <i class="fa-solid fa-credit-card"></i>
+             ادامه و پرداخت
+            </button>
+            <a href="cart.html"
+               class="back-cart">
+                <i class="fa-solid fa-arrow-right"></i>
+                بازگشت به سبد خرید
+            </a>
+        </div>
+    </div>
+</section>
+</main>
+      <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+             <!-- BRAND  -->
+            <div class="footer-brand">
+                <h2>
+                    Art <span>Kade</span>
+                </h2>
+                <p>
+                    فروشگاه آنلاین پوشاک و طراحی لباس
+                </p>
+            </div>
+            <!--  LINKS -->
+            <nav aria-label="منوی اصلی">
+                <ul class="menu">
+                    <li>
+                        <a href="index.html"
+                           class="active">
+                            خانه
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shop.html">
+                            فروشگاه
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            درباره ما
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            ارتباط با ما
+                        </a>
+                    </li>
+            <!-- SOCIAL-->
+            <div class="footer-social">
+                <!-- TELEPHONE -->
+                <a href="tel:09050000000"
+                   aria-label="تماس تلفنی">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <!-- TELEGRAM -->
+                <a href="https://t.me/YOUR_TELEGRAM_ID"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="تلگرام">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <!-- INSTAGRAM -->
+                <a href="https://www.instagram.com/artkade.official/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="اینستاگرام">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <!-- FOOTER BOTTOM -->
+        <div class="footer-bottom">
+            <p>
+                © ۱۴۰۵ آرت کده | تمامی حقوق محفوظ است.
+            </p>
+        </div>
+    </footer>
+     <!-- JAVASCRIPT -->
+<script src="js/payment.js"></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="فروشگاه Art Kade؛ مجموعه لباس خواب و ست‌های ساتن">
+    <title>فروشگاه | Art Kade</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css ">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body class="shop-page-bg">
+    <!-- HEADER -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <img src="img/logo.jpg" alt="لوگوی Art Kade">
+                <div class="logo-text">
+                    <h2>Art <span>Kade</span></h2>
+                </div>
+            </div>
+            <nav aria-label="منوی اصلی">
+                <ul class="menu">
+                    <li><a href="index.html">خانه</a></li>
+                    <li><a href="shop.html" class="active" aria-current="page">فروشگاه</a></li>
+                    <li><a href="index.html#about">درباره ما</a></li>
+                    <li><a href="index.html#contact">ارتباط با ما</a></li>
+                    <li>
+                        <a href="cart.html" aria-label="سبد خرید">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+        <!-- SEARCH -->
+        <section class="shop-search" aria-label="جستجوی محصولات">
+            <div class="search-container">
+                <input type="search" id="searchInput" placeholder="🔍 جستجوی محصول..." aria-label="جستجوی محصول" autocomplete="off">
+            </div>
+        </section>
+        <!-- SHOP -->
+        <section class="shop-section">
+            <div class="container">
+                <div class="section-title">
+                    <h1>فروشگاه Art Kade</h1>
+                    <p>کالکشن جدید لباس خواب و ست‌های ساتن</p>
+                </div>
+                <div class="shop-grid" id="productsContainer">
+                    <!-- PRODUCT 1 -->
+                    <article class="shop-card product" id="1">
+                        <div class="badge">جدید</div>
+                        <div class="product-image">
+                            <a href="product.html?id=1" aria-label="مشاهده جزئیات ست ساتن زرشکی">
+                                <img src="img/red.jpg" alt="ست ساتن زرشکی">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h3>ست ساتن زرشکی</h3>
+                            <p class="desc">پارچه ساتن لوکس</p>
+                            <div class="price-row">
+                                <span class="old">2,790,000</span>
+                                <span class="price">2,490,000</span>
+                            </div>
+                            <button type="button" class="buy-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                افزودن به سبد
+                            </button>
+                        </div>
+                    </article>
+                    <!-- PRODUCT 2 -->
+                    <article class="shop-card product" id="2">
+                        <div class="badge sale">15٪</div>
+                        <div class="product-image">
+                            <a href="product.html?id=2" aria-label="مشاهده جزئیات ست نخی سرمه‌ای">
+                                <img src="img/dark.blue.jpg" alt="ست نخی سرمه‌ای">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h3>ست نخی سرمه‌ای</h3>
+                            <p class="desc">کاملاً تنفس‌پذیر</p>
+                            <div class="price-row">
+                                <span class="old">1,990,000</span>
+                                <span class="price">1,690,000</span>
+                            </div>
+                            <button type="button" class="buy-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                افزودن به سبد
+                            </button>
+                        </div>
+                    </article>
+                    <!-- PRODUCT 3 -->
+                    <article class="shop-card product" id="3">
+                        <div class="badge">پرفروش</div>
+                        <div class="product-image">
+                            <a href="product.html?id=3" aria-label="مشاهده جزئیات ست مخمل آبی">
+                                <img src="img/blue.jpg" alt="ست مخمل آبی">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h3>ست مخمل آبی</h3>
+                            <p class="desc">لطافت فوق‌العاده</p>
+                            <div class="price-row">
+                                <span class="price">2,290,000</span>
+                            </div>
+                            <button type="button" class="buy-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                افزودن به سبد
+                            </button>
+                        </div>
+                    </article>
+                    <!-- PRODUCT 4 -->
+                    <article class="shop-card product" id="4">
+                        <div class="product-image">
+                            <a href="product.html?id=4" aria-label="مشاهده جزئیات ست حریر صورتی">
+                                <img src="img/pink.jpg" alt="ست حریر صورتی">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h3>ست حریر صورتی</h3>
+                            <p class="desc">سبک و لطیف</p>
+                            <div class="price-row">
+                                <span class="price">2,890,000</span>
+                            </div>
+                            <button type="button" class="buy-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                افزودن به سبد
+                            </button>
+                        </div>
+                    </article>
+                    <!-- PRODUCT 5 -->
+                    <article class="shop-card product" id="5">
+                        <div class="product-image">
+                            <a href="product.html?id=5" aria-label="مشاهده جزئیات ست ساتن مشکی">
+                                <img src="img/nn.jpg" alt="ست ساتن مشکی">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h3>ست ساتن مشکی</h3>
+                            <p class="desc">کلاسیک و شیک</p>
+                            <div class="price-row">
+                                <span class="price">2,490,000</span>
+                            </div>
+                            <button type="button" class="buy-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                افزودن به سبد
+                            </button>
+                        </div>
+                    </article>
+                    <!-- PRODUCT 6 -->
+                    <article class="shop-card product" id="6">
+                        <div class="product-image">
+                            <a href="product.html?id=6" aria-label="مشاهده جزئیات ست ساتن سبز">
+                                <img src="img/green.jpg" alt="ست ساتن سبز">
+                            </a>
+                        </div>
+                        <div class="product-info">
+                            <h3>ست ساتن سبز</h3>
+                            <p class="desc">رنگ خاص و جذاب</p>
+                            <div class="price-row">
+                                <span class="price">2,490,000</span>
+                            </div>
+                            <button type="button" class="buy-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                افزودن به سبد
+                            </button>
+                        </div>
+                    </article>
+                </div>
+                <!-- NO RESULT -->
+                <p id="notFound" role="status">محصولی پیدا نشد</p>
+            </div>
+        </section>
+    </main>
+     <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+        <!-- BRAND -->
+            <div class="footer-brand">
+                <h2>
+                    Art <span>Kade</span>
+                </h2>
+                <p>
+                    فروشگاه آنلاین پوشاک و طراحی لباس
+                </p>
+            </div>
+             <!-- LINKS  -->
+            <nav aria-label="منوی اصلی">
+                <ul class="menu">
+                    <li>
+                        <a href="index.html"
+                           class="active">
+                            خانه
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shop.html">
+                            فروشگاه
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#index.html#about">
+                            درباره ما
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#index.html#contact">
+                            ارتباط با ما
+                        </a>
+                    </li>
+             <!-- SOCIAL -->
+            <div class="footer-social">
+            <!-- TELEPHONE -->
+                <a href="tel:09050000000"
+                   aria-label="تماس تلفنی">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <!-- TELEGRAM -->
+                <a href="https://t.me/YOUR_TELEGRAM_ID"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="تلگرام">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <!-- INSTAGRAM -->
+                <a href="https://www.instagram.com/artkade.official/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="اینستاگرام">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+         <!-- FOOTER BOTTOM  -->
+        <div class="footer-bottom">
+            <p>
+                © ۱۴۰۵ آرت کده | تمامی حقوق محفوظ است.
+            </p>
+        </div>
+    </footer>
+    <script src="js/shop.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+/* =====================================================
+   PAYMENT PAGE
+   ===================================================== */
+
+.payment-page {
+    background: #021028;
+    min-height: 100vh;
+}
+
+.payment-section {
+    padding: 60px 20px 80px;
+}
+
+
+/* =====================================================
+   TITLE
+   ===================================================== */
+
+.payment-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.payment-title h1 {
+    color: #d4af37;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.payment-title p {
+    color: #ffffff;
+    opacity: .8;
+    margin: 0;
+}
+
+
+/* =====================================================
+   LAYOUT
+   ===================================================== */
+
+.payment-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    gap: 30px;
+}
+
+.payment-card {
+    background: #031a35;
+
+    border: 1px solid rgba(212, 175, 55, .35);
+
+    border-radius: 18px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, .25);
+}
+
+.payment-card h2 {
+    color: #d4af37;
+
+    font-size: 22px;
+
+    margin-top: 0;
+
+    margin-bottom: 25px;
+
+    padding-bottom: 15px;
+
+    border-bottom:
+        1px solid rgba(212, 175, 55, .35);
+}
+
+.payment-card h2 i {
+    margin-left: 8px;
+}
+
+
+/* =====================================================
+   FORM
+   ===================================================== */
+
+.payment-form-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.payment-field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.payment-field.full {
+    grid-column: 1 / -1;
+}
+
+.payment-field label {
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+.payment-field label span {
+    color: #d4af37;
+}
+
+.payment-field input,
+.payment-field select,
+.payment-field textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 13px 15px;
+
+    background: #021028;
+
+    border: 1px solid rgba(212, 175, 55, .3);
+
+    border-radius: 9px;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: .3s;
+}
+
+.payment-field textarea {
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+.payment-field input::placeholder,
+.payment-field textarea::placeholder {
+    color: #8d99a8;
+}
+
+.payment-field input:focus,
+.payment-field select:focus,
+.payment-field textarea:focus {
+    border-color: #d4af37;
+
+    box-shadow:
+        0 0 12px rgba(212, 175, 55, .12);
+}
+
+
+/* =====================================================
+   SHIPPING
+   ===================================================== */
+
+.shipping-title {
+    color: #ffffff;
+
+    margin-top: 28px;
+
+    margin-bottom: 15px;
+
+    font-weight: bold;
+}
+
+.shipping-options {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.shipping-option {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(212, 175, 55, .25);
+
+    background: #021028;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.shipping-option:hover {
+    border-color: #d4af37;
+}
+
+.shipping-option input {
+    accent-color: #d4af37;
+}
+
+.shipping-text {
+    flex: 1;
+
+    color: #ffffff;
+}
+
+.shipping-text small {
+    display: block;
+
+    color: #9da8b5;
+
+    margin-top: 4px;
+}
+
+.shipping-price {
+    color: #d4af37;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   ORDER
+   ===================================================== */
+
+#payment-products {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.payment-product {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding-bottom: 14px;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, .08);
+}
+
+.payment-product img {
+    width: 70px;
+
+    height: 70px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(212, 175, 55, .3);
+
+    flex-shrink: 0;
+}
+
+.payment-product-info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.payment-product-info h3 {
+    color: #ffffff;
+
+    font-size: 15px;
+
+    margin: 0 0 6px;
+}
+
+.payment-product-info p {
+    color: #aeb7c2;
+
+    font-size: 13px;
+
+    margin: 0;
+}
+
+.payment-product-total {
+    color: #d4af37;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   TOTAL
+   ===================================================== */
+
+.payment-summary {
+    margin-top: 25px;
+}
+
+.summary-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 13px 0;
+
+    color: #ffffff;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, .08);
+}
+
+.summary-row strong {
+    color: #ffffff;
+}
+
+.summary-row.final {
+    border-bottom: none;
+
+    margin-top: 5px;
+
+    font-size: 19px;
+
+    font-weight: bold;
+}
+
+.summary-row.final strong {
+    color: #d4af37;
+}
+
+
+/* =====================================================
+   PAY BUTTON
+   ===================================================== */
+
+.payment-button {
+    width: 100%;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #d4af37;
+
+    color: #021028;
+
+    font-family: inherit;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.payment-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(212, 175, 55, .2);
+}
+
+.back-cart {
+    display: block;
+
+    text-align: center;
+
+    margin-top: 18px;
+
+    color: #d4af37;
+
+    text-decoration: none;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   EMPTY
+   ===================================================== */
+
+.payment-empty {
+    text-align: center;
+
+    color: #ffffff;
+
+    padding: 35px 10px;
+}
+
+.payment-empty i {
+    color: #d4af37;
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}

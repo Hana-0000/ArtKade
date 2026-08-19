@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="جزئیات محصول | Art Kade">
+    <title>محصول | Art Kade</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/Product.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="product-page-bg">
+    <!-- HEADER -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                <img src="img/logo.jpg" alt="لوگوی Art Kade">
+                <div class="logo-text">
+                    <h2>Art <span>Kade</span></h2>
+                </div>
+            </div>
+            <nav aria-label="منوی اصلی">
+                <ul class="menu">
+                    <li><a href="index.html">خانه</a></li>
+                    <li><a href="shop.html">فروشگاه</a></li>
+                    <li><a href="index.html#about">درباره ما</a></li>
+                    <li><a href="index.html#contact">ارتباط با ما</a></li>
+                    <li>
+                        <a href="cart.html" aria-label="سبد خرید">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- PRODUCT DETAIL -->
+    <main>
+        <section class="product-detail-section">
+            <div class="container">
+                <!-- BREADCRUMB -->
+                <nav class="breadcrumb" aria-label="مسیر صفحه">
+                    <a href="index.html">خانه</a>
+                    <span>/</span>
+                    <a href="shop.html">فروشگاه</a>
+                    <span>/</span>
+                    <span id="breadcrumb-name">محصول</span>
+                </nav>
+                <div class="product-detail">
+                    <!-- IMAGE -->
+                    <div class="detail-image">
+                        <img id="product-image" src="" alt="تصویر محصول">
+                    </div>
+                    <!-- INFO -->
+                    <div class="detail-info">
+                        <h1 id="product-name">محصول</h1>
+                        <div class="detail-line"></div>
+                        <div class="detail-price">
+                            <span id="product-price">0</span>
+                            <span>تومان</span>
+                        </div>
+                        <p class="product-size">
+                            سایز:
+                            <span id="product-size">فری‌سایز</span>
+                        </p>
+                        <p id="product-description" class="product-description"></p>
+                        <!-- COLOR -->
+                        <div class="color-section">
+                            <strong>رنگ:</strong>
+                            <div class="color-options">
+                                <button type="button" class="color active" data-color="اصلی" aria-label="رنگ اصلی" title="رنگ اصلی"></button>
+                                <button type="button" class="color color-black" data-color="مشکی" aria-label="رنگ مشکی" title="مشکی"></button>
+                                <button type="button" class="color color-blue" data-color="سرمه‌ای" aria-label="رنگ سرمه‌ای" title="سرمه‌ای"></button>
+                                <button type="button" class="color color-gold" data-color="طلایی" aria-label="رنگ طلایی" title="طلایی"></button>
+                            </div>
+                        </div>
+                        <!-- QUANTITY + CART -->
+                        <div class="purchase-row">
+                            <div class="quantity-detail">
+                                <button type="button" id="plus" aria-label="افزایش تعداد">+</button>
+                                <span id="quantity">1</span>
+                                <button type="button" id="minus" aria-label="کاهش تعداد">−</button>
+                            </div>
+                            <button type="button" id="add-to-cart" class="detail-add-btn">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                افزودن به سبد خرید
+                            </button>
+                        </div>
+                        <!-- META -->
+                        <div class="product-meta">
+                            <p>
+                                <strong>شناسه محصول:</strong>
+                                <span id="product-id"></span>
+                            </p>
+                            <p>
+                                <strong>دسته:</strong>
+                                <span id="product-category">لباس خواب، ست زنانه</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+             <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+             <!-- BRAND -->
+            <div class="footer-brand">
+                <h2>
+                    Art <span>Kade</span>
+                </h2>
+                <p>
+                    فروشگاه آنلاین پوشاک و طراحی لباس
+                </p>
+            </div>
+             <!-- LINKS -->
+           <nav aria-label="منوی اصلی">
+                <ul class="menu">
+                    <li>
+                        <a href="index.html"
+                           class="active">
+                            خانه
+                        </a>
+                    </li>
+                    <li>
+                        <a href="shop.html">
+                            فروشگاه
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            درباره ما
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact">
+                            ارتباط با ما
+                        </a>
+                    </li>
+          <!-- SOCIAL -->
+            <div class="footer-social">
+                <!-- TELEPHONE -->
+                <a href="tel:09050000000"
+                   aria-label="تماس تلفنی">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <!-- TELEGRAM -->
+                <a href="https://t.me/artkade.official"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="تلگرام">
+                    <i class="fa-brands fa-telegram"></i>
+                </a>
+                <!-- INSTAGRAM -->
+                <a href="https://www.instagram.com/artkade.official/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="اینستاگرام">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+       <!-- FOOTER BOTTOM  -->
+        <div class="footer-bottom">
+            <p>
+                © ۱۴۰۵ آرت کده | تمامی حقوق محفوظ است.
+            </p>
+        </div>
+    </footer>
+    <script src="js/product.js"></script>
+</body>
+</html>

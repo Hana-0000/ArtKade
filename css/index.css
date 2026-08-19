@@ -1,92 +1,135 @@
-   /* GENERAL SECTIONS */
+/* =====================================================
+   GENERAL SECTIONS
+===================================================== */
+
 .section{
-    padding:30px 0;
+    padding:45px 0;
     background:var(--card-dark);
 }
-   /* SECTION TITLE */
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
 .section-title{
     text-align:center;
-    margin-bottom:25px;
+    margin-bottom:35px;
 }
+
 .section-title h2{
     color:var(--primary);
     font-size:38px;
-    margin-bottom:6px;
+    margin-bottom:8px;
+    line-height:1.5;
 }
+
 .section-title p{
     color:var(--gray);
     font-size:17px;
     margin:0;
+    line-height:1.8;
 }
+
 #contact .section-title h2{
     margin-top:0;
     margin-bottom:35px;
 }
-   /* HERO */
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
 .hero{
     min-height:90vh;
     display:flex;
     align-items:center;
 }
+
 .hero-content{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:70px;
     align-items:center;
 }
+
 .hero h1{
     font-size:58px;
     line-height:1.4;
     margin-bottom:20px;
 }
+
 .hero h1 span{
     color:var(--primary);
 }
+
 .hero p{
     color:var(--gray);
     margin-bottom:35px;
+    line-height:2;
 }
+
 .hero-buttons{
     display:flex;
     gap:18px;
     margin-bottom:35px;
 }
+
 .hero-info{
     display:flex;
     gap:20px;
     flex-wrap:wrap;
 }
+
 .hero-info div{
     background:var(--card);
     padding:14px 20px;
     border-radius:12px;
     box-shadow:var(--shadow);
 }
+
 .hero-info i{
     color:var(--primary);
     margin-left:8px;
 }
+
+.hero-image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
 .hero-image img{
+    width:100%;
     max-width:450px;
     margin:auto;
     border-radius:20px;
     box-shadow:0 20px 50px rgba(0,0,0,.45);
     animation:float 4s infinite ease-in-out;
 }
+
 @keyframes float{
     0%,100%{
         transform:translateY(0);
     }
+
     50%{
         transform:translateY(-15px);
     }
 }
-   /* FEATURES */
+
+
+/* =====================================================
+   FEATURES
+===================================================== */
+
 .features{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:25px;
 }
+
 .feature{
     background:var(--card);
     padding:35px 25px;
@@ -95,45 +138,65 @@
     box-shadow:var(--shadow);
     transition:.3s;
 }
+
 .feature:hover{
     transform:translateY(-10px);
 }
+
 .feature i{
     font-size:45px;
     color:var(--primary);
     margin-bottom:20px;
 }
+
 .feature h3{
     font-size:22px;
     margin-bottom:15px;
 }
+
 .feature p{
     color:var(--gray);
+    line-height:1.9;
 }
-   /* ABOUT */
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
 .about-content{
     display:grid;
     grid-template-columns:1fr;
     text-align:center;
 }
+
 .about-text{
     max-width:850px;
     margin:auto;
 }
+
 .about-text h2{
     color:var(--primary);
     font-size:36px;
     margin-bottom:15px;
 }
+
 .about-text p{
     color:var(--gray);
     text-align:justify;
     margin-bottom:35px;
+    line-height:2.1;
 }
+
 #about{
     scroll-margin-top:100px;
 }
-   /* INSTAGRAM */ 
+
+
+/* =====================================================
+   INSTAGRAM
+===================================================== */
+
 .instagram-box{
     background:linear-gradient(
         135deg,
@@ -146,25 +209,36 @@
     padding:50px 30px;
     box-shadow:var(--shadow);
 }
+
 .instagram-box i{
     font-size:70px;
     margin-bottom:20px;
 }
+
 .instagram-box h3{
     font-size:30px;
     margin-bottom:15px;
 }
+
 .instagram-box p{
     margin-bottom:30px;
+    line-height:2;
 }
-   /* CONTACT */
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
 .contact-box{
     display:grid;
-    grid-template-columns:
-        repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(3,1fr);
     gap:25px;
 }
-/* خود کارت */
+
+
+/* CONTACT CARD */
+
 .contact-box div{
     position:relative;
     background:var(--card);
@@ -174,11 +248,14 @@
     box-shadow:var(--shadow);
     transition:.3s;
 }
-/* افکت هاور */
+
 .contact-box div:hover{
     transform:translateY(-8px);
 }
-/* آیکون */
+
+
+/* ICON */
+
 .contact-box i{
     color:var(--primary);
     font-size:40px;
@@ -186,12 +263,19 @@
     position:relative;
     z-index:2;
 }
-/* متن */
+
+
+/* TEXT */
+
 .contact-box p{
     position:relative;
     z-index:2;
 }
-   /* CLICKABLE CONTACT CARDS */
+
+
+/* =====================================================
+   CLICKABLE CONTACT CARDS
+===================================================== */
 
 .contact-link{
     position:absolute;
@@ -210,43 +294,454 @@
 .contact-box div > p{
     pointer-events:none;
 }
-   /* HOME RESPONSIVE */
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
 @media(max-width:1000px){
+
+    .hero{
+        min-height:auto;
+        padding:70px 0;
+    }
+
     .hero-content{
-        grid-template-columns:1fr;
-        text-align:center;
+        grid-template-columns:1fr 1fr;
+        gap:35px;
     }
+
     .hero h1{
-        font-size:42px;
+        font-size:43px;
     }
-    .hero-buttons,
-    .hero-info{
-        justify-content:center;
+
+    .hero p{
+        font-size:15px;
     }
+
+    .hero-buttons{
+        justify-content:flex-start;
+    }
+
     .features{
         grid-template-columns:repeat(2,1fr);
     }
+
+    .contact-box{
+        grid-template-columns:repeat(3,1fr);
+        gap:18px;
+    }
+
+    .contact-box div{
+        padding:28px 18px;
+    }
 }
+
+
+/* =====================================================
+   MOBILE / TABLET
+===================================================== */
+
 @media(max-width:768px){
+
+    .section{
+        padding:40px 0;
+    }
+
+
+    /* ================= HERO ================= */
+
     .hero{
         min-height:auto;
-        padding:45px 0;
+        padding:45px 0 50px;
     }
+
+    .hero-content{
+        grid-template-columns:1fr;
+        gap:35px;
+        text-align:center;
+    }
+
+    .hero-text{
+        order:1;
+    }
+
+    .hero-image{
+        order:2;
+    }
+
     .hero h1{
         font-size:34px;
+        line-height:1.6;
+        margin-bottom:15px;
     }
+
+    .hero p{
+        font-size:14px;
+        line-height:2;
+        margin-bottom:25px;
+    }
+
     .hero-buttons{
-        flex-direction:column;
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        gap:10px;
+        margin-bottom:25px;
     }
-    .features{
-        grid-template-columns:1fr;
+
+    .hero-buttons .btn{
+        padding:11px 18px;
+        font-size:13px;
     }
+
+    .hero-info{
+        justify-content:center;
+        gap:10px;
+    }
+
+    .hero-info div{
+        padding:10px 13px;
+        font-size:12px;
+    }
+
+    .hero-image img{
+        width:85%;
+        max-width:380px;
+    }
+
+
+    /* ================= TITLE ================= */
+
+    .section-title{
+        margin-bottom:25px;
+    }
+
     .section-title h2{
         font-size:30px;
     }
+
+    .section-title p{
+        font-size:14px;
+    }
+
+
+    /* ================= FEATURES ================= */
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+        gap:14px;
+    }
+
+    .feature{
+        padding:25px 15px;
+        border-radius:15px;
+    }
+
+    .feature i{
+        font-size:35px;
+        margin-bottom:12px;
+    }
+
+    .feature h3{
+        font-size:17px;
+        margin-bottom:8px;
+    }
+
+    .feature p{
+        font-size:12px;
+        line-height:1.8;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about-text{
+        width:94%;
+    }
+
+    .about-text h2{
+        font-size:30px;
+    }
+
+    .about-text p{
+        font-size:13px;
+        line-height:2;
+        text-align:right;
+    }
+
+
+    /* ================= INSTAGRAM ================= */
+
+    .instagram-box{
+        padding:40px 20px;
+        border-radius:18px;
+    }
+
+    .instagram-box i{
+        font-size:55px;
+        margin-bottom:15px;
+    }
+
+    .instagram-box h3{
+        font-size:22px;
+    }
+
+    .instagram-box p{
+        font-size:13px;
+        line-height:2;
+        margin-bottom:25px;
+    }
+
+
+    /* ================= CONTACT ================= */
+
+    .contact-box{
+        grid-template-columns:repeat(3,1fr);
+        gap:10px;
+    }
+
+    .contact-box div{
+        padding:25px 8px;
+        border-radius:14px;
+    }
+
+    .contact-box i{
+        font-size:30px;
+        margin-bottom:10px;
+    }
+
+    .contact-box p{
+        font-size:11px;
+        white-space:nowrap;
+    }
 }
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
 @media(max-width:500px){
+
+    .section{
+        padding:35px 0;
+    }
+
+
+    /* ================= HERO ================= */
+
+    .hero{
+        padding:35px 0 40px;
+    }
+
+    .hero-content{
+        gap:25px;
+    }
+
+    .hero h1{
+        font-size:28px;
+        line-height:1.7;
+    }
+
+    .hero p{
+        font-size:12px;
+        line-height:2;
+        margin-bottom:20px;
+    }
+
+    .hero-buttons{
+        gap:8px;
+    }
+
+    .hero-buttons .btn{
+        padding:10px 14px;
+        font-size:11px;
+    }
+
     .hero-info{
-        flex-direction:column;
+        gap:7px;
+    }
+
+    .hero-info div{
+        padding:8px 10px;
+        font-size:10px;
+    }
+
+    .hero-image img{
+        width:88%;
+        max-width:330px;
+        border-radius:16px;
+    }
+
+
+    /* ================= TITLE ================= */
+
+    .section-title{
+        margin-bottom:22px;
+    }
+
+    .section-title h2{
+        font-size:25px;
+    }
+
+    .section-title p{
+        font-size:12px;
+    }
+
+
+    /* ================= FEATURES ================= */
+
+    .features{
+        grid-template-columns:repeat(2,1fr);
+        gap:10px;
+    }
+
+    .feature{
+        padding:20px 9px;
+        border-radius:13px;
+    }
+
+    .feature i{
+        font-size:30px;
+        margin-bottom:10px;
+    }
+
+    .feature h3{
+        font-size:14px;
+    }
+
+    .feature p{
+        font-size:10px;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about-text{
+        width:92%;
+    }
+
+    .about-text h2{
+        font-size:25px;
+    }
+
+    .about-text p{
+        font-size:11px;
+        line-height:2.1;
+    }
+
+    .about .hero-info{
+        gap:7px;
+    }
+
+
+    /* ================= INSTAGRAM ================= */
+
+    .instagram-box{
+        padding:32px 15px;
+        border-radius:16px;
+    }
+
+    .instagram-box i{
+        font-size:48px;
+    }
+
+    .instagram-box h3{
+        font-size:19px;
+    }
+
+    .instagram-box p{
+        font-size:11px;
+    }
+
+
+    /* ================= CONTACT ================= */
+
+    .contact-box{
+        grid-template-columns:repeat(3,1fr);
+        gap:7px;
+    }
+
+    .contact-box div{
+        padding:20px 5px;
+        border-radius:12px;
+    }
+
+    .contact-box i{
+        font-size:25px;
+    }
+
+    .contact-box p{
+        font-size:9px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media(max-width:360px){
+
+    .hero h1{
+        font-size:25px;
+    }
+
+    .hero p{
+        font-size:11px;
+    }
+
+    .hero-buttons .btn{
+        padding:9px 11px;
+        font-size:10px;
+    }
+
+    .hero-info div{
+        padding:7px 8px;
+        font-size:9px;
+    }
+
+    .hero-image img{
+        width:90%;
+    }
+
+
+    .features{
+        gap:8px;
+    }
+
+    .feature{
+        padding:17px 6px;
+    }
+
+    .feature i{
+        font-size:27px;
+    }
+
+    .feature h3{
+        font-size:13px;
+    }
+
+    .feature p{
+        font-size:9px;
+    }
+
+
+    .contact-box{
+        gap:5px;
+    }
+
+    .contact-box div{
+        padding:17px 3px;
+    }
+
+    .contact-box i{
+        font-size:22px;
+    }
+
+    .contact-box p{
+        font-size:8px;
     }
 }

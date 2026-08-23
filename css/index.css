@@ -1789,12 +1789,13 @@ footer.footer{
         text-align:center;
     }
 
-    #about .about-text p{
-        font-size:11px;
-        line-height:2;
-        text-align:center;
-        margin-bottom:22px;
-    }
+   #about .about-text p{
+    width:100%;
+    font-size:9px;
+    line-height:1.8;
+    text-align:center;
+    margin-bottom:18px;
+}
 
     /* اگر داخل About از باکس‌های feature استفاده شده */
     #about .features{
@@ -1863,10 +1864,11 @@ footer.footer{
     }
 
     #about .about-text p{
-        font-size:10px;
-        line-height:1.9;
-        margin-bottom:18px;
-    }
+    width:100%;
+    font-size:8px;
+    line-height:1.8;
+    text-align:center;
+}
 
     #about .features{
         width:92%;
@@ -1943,4 +1945,59 @@ footer.footer{
 
 .about{
     display:block !important;
+}
+/* =====================================================
+   ABOUT - MOBILE COMPACT
+===================================================== */
+
+@media(max-width:768px){
+
+    /* عنوان درباره ما در یک خط */
+    #about .section-title h2{
+        font-size:22px;
+        white-space:nowrap;
+    }
+
+    /* متن درباره ما جمع و جورتر */
+    #about .about-text p{
+        font-size:9px;
+        line-height:1.8;
+        margin-bottom:15px;
+    }
+
+    /* سه باکس در یک ردیف */
+    #about .features{
+        width:94%;
+        margin:0 auto;
+
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+
+        gap:7px;
+    }
+
+    /* کوچک کردن باکس‌ها */
+    #about .feature{
+        padding:12px 5px;
+        min-height:65px;
+        border-radius:10px;
+    }
+
+    /* کوچک کردن آیکون‌ها */
+    #about .feature i{
+        font-size:21px;
+        margin-bottom:4px;
+    }
+
+    /* متن باکس‌ها */
+    #about .feature h3{
+        font-size:9px;
+        line-height:1.5;
+        margin:0;
+        white-space:nowrap;
+    }
+
+    #about .feature p{
+        display:none;
+    }
 }

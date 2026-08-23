@@ -115,7 +115,7 @@ header{
 .logo img{
     width:65px;
     height:65px;
-    object-fit:cover;
+    object-fit:contain;
 }
 
 .logo-text h2{

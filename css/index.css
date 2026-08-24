@@ -327,7 +327,6 @@ header{
     display:flex;
     gap:10px;
     flex-wrap:nowrap;
-    width:100%;
 }
 
 .hero-info div{
@@ -335,16 +334,14 @@ header{
     padding:10px 12px;
     border-radius:10px;
     box-shadow:var(--shadow);
-    flex:1;
-    min-width:0;
-    text-align:center;
-    font-size:13px;
+    font-size:12px;
+    white-space:nowrap;
 }
 
 .hero-info i{
     color:var(--primary);
     margin-left:5px;
-    font-size:14px;
+    font-size:13px;
 }
 .hero-image{
     display:flex;
@@ -2376,5 +2373,22 @@ footer.footer{
     #about .feature h3{
         font-size:6.5px !important;
         white-space:nowrap !important;
+    }
+}
+@media (max-width:600px){
+
+    .hero-info{
+        gap:6px;
+    }
+
+    .hero-info div{
+        padding:7px 6px;
+        font-size:9px;
+        white-space:nowrap;
+    }
+
+    .hero-info i{
+        font-size:10px;
+        margin-left:3px;
     }
 }

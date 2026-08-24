@@ -286,7 +286,6 @@
     .detail-price{
         font-size:23px;
     }
-
 }
 
 
@@ -312,95 +311,249 @@
     .detail-info h1{
         font-size:30px;
     }
-
 }
 
 
 /* =====================================================
-   MOBILE
+   MOBILE - TWO COLUMNS
 ===================================================== */
 
 @media(max-width:600px){
 
     .product-detail-section{
-        padding:25px 0 45px;
+        padding:20px 0 40px;
     }
 
     .product-detail-section .container{
-        width:92%;
+        width:96%;
     }
+
+
+    /* ================= BREADCRUMB ================= */
 
     .breadcrumb{
-        gap:8px;
-        font-size:13px;
-        margin-bottom:20px;
+        gap:5px;
+        font-size:10px;
+        margin-bottom:12px;
+        flex-wrap:nowrap;
+        white-space:nowrap;
+        overflow:hidden;
     }
+
+
+    /* ================= TWO COLUMNS ================= */
 
     .product-detail{
-        gap:25px;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+        align-items:start;
     }
 
+
+    /* ================= IMAGE ================= */
+
     .detail-image{
-        height:450px;
-        border-radius:14px;
+        width:100%;
+        height:300px;
+        border-radius:10px;
+    }
+
+
+    /* ================= INFO ================= */
+
+    .detail-info{
+        width:100%;
+        padding:0;
+        min-width:0;
     }
 
     .detail-info h1{
-        font-size:25px;
-        line-height:1.6;
-        margin-bottom:10px;
+        font-size:17px;
+        line-height:1.5;
+        margin-bottom:7px;
     }
 
     .detail-line{
-        margin-bottom:15px;
+        width:25px;
+        height:2px;
+        margin-bottom:10px;
     }
+
+
+    /* ================= PRICE ================= */
 
     .detail-price{
-        font-size:22px;
-        margin-bottom:15px;
+        gap:4px;
+        font-size:15px;
+        margin-bottom:10px;
+        flex-wrap:nowrap;
     }
+
+
+    /* ================= SIZE ================= */
 
     .product-size{
-        font-size:15px;
-        margin-bottom:15px;
+        font-size:11px;
+        margin-bottom:10px;
     }
+
+
+    /* ================= DESCRIPTION ================= */
 
     .product-description{
-        font-size:14px;
-        line-height:2;
-        margin-bottom:20px;
+        font-size:10px;
+        line-height:1.7;
+        margin-bottom:12px;
     }
 
+
+    /* ================= COLORS ================= */
+
     .color-section{
-        gap:12px;
-        margin-bottom:20px;
+        gap:7px;
+        margin-bottom:12px;
+        flex-wrap:wrap;
+    }
+
+    .color-options{
+        gap:5px;
     }
 
     .color{
-        width:32px;
-        height:32px;
+        width:22px;
+        height:22px;
     }
 
+
+    /* ================= PURCHASE ================= */
+
     .purchase-row{
+        display:flex;
         flex-direction:column;
         align-items:stretch;
-        gap:12px;
+        gap:7px;
+        margin-bottom:12px;
     }
 
     .quantity-detail{
+        width:max-content;
         align-self:flex-start;
+        border-radius:12px;
+    }
+
+    .quantity-detail button{
+        width:27px;
+        height:28px;
+        font-size:13px;
+    }
+
+    .quantity-detail span{
+        width:27px;
+        font-size:12px;
     }
 
     .detail-add-btn{
         width:100%;
-        height:48px;
+        height:34px;
+        border-radius:15px;
+        font-size:10px;
+        padding:0 5px;
     }
+
+
+    /* ================= META ================= */
 
     .product-meta p{
-        font-size:13px;
-        padding:10px 0;
+        font-size:9px;
+        line-height:1.6;
+        padding:7px 0;
     }
 
+
+    /* =================================================
+       HEADER LOGO
+    ================================================= */
+
+    .logo{
+        transform:translateX(-3px);
+    }
+
+
+    /* =================================================
+       FOOTER
+    ================================================= */
+
+    footer.footer{
+        width:100%;
+        padding:25px 4% 12px;
+        margin:0;
+        overflow:hidden;
+    }
+
+    .footer-content{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:14px;
+    }
+
+    .footer-brand{
+        width:100%;
+        text-align:center;
+    }
+
+    .footer-brand h2{
+        font-size:18px;
+        margin-bottom:4px;
+    }
+
+    .footer-brand p{
+        font-size:10px;
+        line-height:1.6;
+        margin:0;
+    }
+
+    .footer-links{
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:7px 14px;
+    }
+
+    .footer-links a{
+        font-size:10px;
+        white-space:nowrap;
+    }
+
+    .footer-social{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:8px;
+    }
+
+    .footer-social a{
+        width:32px;
+        height:32px;
+        font-size:12px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .footer-bottom{
+        width:100%;
+        margin-top:12px;
+        padding-top:10px;
+        font-size:8px;
+        line-height:1.6;
+        text-align:center;
+    }
 }
 
 
@@ -411,38 +564,120 @@
 @media(max-width:400px){
 
     .product-detail-section .container{
-        width:94%;
+        width:96%;
     }
+
+    .product-detail{
+        gap:8px;
+    }
+
+
+    /* ================= IMAGE ================= */
 
     .detail-image{
-        height:380px;
-        border-radius:12px;
+        height:260px;
+        border-radius:9px;
     }
+
+
+    /* ================= INFO ================= */
 
     .detail-info h1{
-        font-size:22px;
-    }
-
-    .detail-price{
-        font-size:20px;
-    }
-
-    .product-description{
-        font-size:13px;
-    }
-
-    .quantity-detail button{
-        width:35px;
-    }
-
-    .quantity-detail span{
-        width:35px;
-    }
-
-    .detail-add-btn{
         font-size:15px;
     }
 
+    .detail-price{
+        font-size:13px;
+    }
+
+    .product-size{
+        font-size:10px;
+    }
+
+    .product-description{
+        font-size:9px;
+        line-height:1.6;
+    }
+
+
+    /* ================= COLORS ================= */
+
+    .color{
+        width:20px;
+        height:20px;
+    }
+
+
+    /* ================= QUANTITY ================= */
+
+    .quantity-detail button{
+        width:24px;
+        height:25px;
+        font-size:12px;
+    }
+
+    .quantity-detail span{
+        width:24px;
+        font-size:11px;
+    }
+
+
+    /* ================= BUTTON ================= */
+
+    .detail-add-btn{
+        height:31px;
+        font-size:9px;
+    }
+
+
+    /* ================= META ================= */
+
+    .product-meta p{
+        font-size:8px;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer.footer{
+        padding:22px 4% 10px;
+    }
+
+    .footer-content{
+        gap:11px;
+    }
+
+    .footer-brand h2{
+        font-size:16px;
+    }
+
+    .footer-brand p{
+        font-size:9px;
+    }
+
+    .footer-links{
+        gap:6px 11px;
+    }
+
+    .footer-links a{
+        font-size:9px;
+    }
+
+    .footer-social{
+        gap:7px;
+    }
+
+    .footer-social a{
+        width:29px;
+        height:29px;
+        font-size:11px;
+    }
+
+    .footer-bottom{
+        margin-top:9px;
+        padding-top:8px;
+        font-size:7px;
+    }
 }
 
 
@@ -453,19 +688,62 @@
 @media(max-width:320px){
 
     .detail-image{
-        height:330px;
+        height:220px;
     }
 
     .detail-info h1{
-        font-size:20px;
+        font-size:13px;
     }
 
     .detail-price{
-        font-size:18px;
-    }
-
-    .breadcrumb{
         font-size:12px;
     }
 
+    .product-description{
+        font-size:8px;
+    }
+
+    .detail-add-btn{
+        font-size:8px;
+        height:29px;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer.footer{
+        padding:18px 4% 8px;
+    }
+
+    .footer-brand h2{
+        font-size:14px;
+    }
+
+    .footer-brand p{
+        font-size:8px;
+    }
+
+    .footer-links{
+        gap:5px 9px;
+    }
+
+    .footer-links a{
+        font-size:8px;
+    }
+
+    .footer-social{
+        gap:6px;
+    }
+
+    .footer-social a{
+        width:28px;
+        height:28px;
+        font-size:10px;
+    }
+
+    .footer-bottom{
+        margin-top:8px;
+        padding-top:7px;
+        font-size:7px;
+    }
 }

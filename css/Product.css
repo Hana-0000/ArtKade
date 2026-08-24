@@ -747,3 +747,158 @@
         font-size:7px;
     }
 }
+/* =================================================
+   FOOTER - SMALLER MOBILE
+================================================= */
+
+@media(max-width:600px){
+
+    footer.footer{
+        width:100%;
+        padding:18px 4% 8px;
+        margin:0;
+        overflow:hidden;
+    }
+
+    .footer-content{
+        width:100%;
+        gap:9px;
+    }
+
+    .footer-brand{
+        width:100%;
+        text-align:center;
+    }
+
+    .footer-brand h2{
+        font-size:15px;
+        margin-bottom:2px;
+    }
+
+    .footer-brand p{
+        font-size:8px;
+        line-height:1.5;
+    }
+
+    .footer-links{
+        width:100%;
+        gap:5px 10px;
+    }
+
+    .footer-links a{
+        font-size:8px;
+    }
+
+    .footer-social{
+        gap:6px;
+    }
+
+    .footer-social a{
+        width:27px;
+        height:27px;
+        font-size:10px;
+    }
+
+    .footer-bottom{
+        margin-top:7px;
+        padding-top:7px;
+        font-size:7px;
+        line-height:1.5;
+    }
+}
+
+
+/* =================================================
+   VERY SMALL MOBILE
+================================================= */
+
+@media(max-width:400px){
+
+    footer.footer{
+        padding:16px 4% 7px;
+    }
+
+    .footer-content{
+        gap:8px;
+    }
+
+    .footer-brand h2{
+        font-size:14px;
+    }
+
+    .footer-brand p{
+        font-size:7px;
+    }
+
+    .footer-links{
+        gap:4px 8px;
+    }
+
+    .footer-links a{
+        font-size:7px;
+    }
+
+    .footer-social{
+        gap:5px;
+    }
+
+    .footer-social a{
+        width:25px;
+        height:25px;
+        font-size:9px;
+    }
+
+    .footer-bottom{
+        margin-top:6px;
+        padding-top:6px;
+        font-size:6px;
+    }
+}
+
+
+/* =================================================
+   EXTREMELY SMALL MOBILE
+================================================= */
+
+@media(max-width:320px){
+
+    footer.footer{
+        padding:14px 4% 6px;
+    }
+
+    .footer-content{
+        gap:7px;
+    }
+
+    .footer-brand h2{
+        font-size:13px;
+    }
+
+    .footer-brand p{
+        font-size:6px;
+    }
+
+    .footer-links{
+        gap:4px 7px;
+    }
+
+    .footer-links a{
+        font-size:6px;
+    }
+
+    .footer-social{
+        gap:4px;
+    }
+
+    .footer-social a{
+        width:23px;
+        height:23px;
+        font-size:8px;
+    }
+
+    .footer-bottom{
+        margin-top:5px;
+        padding-top:5px;
+        font-size:6px;
+    }
+}

@@ -1,422 +1,972 @@
 /* =====================================================
    PAYMENT PAGE
-   ===================================================== */
+===================================================== */
 
-.payment-page {
-    background: #021028;
-    min-height: 100vh;
+.payment-page{
+    background:#021028;
+    min-height:100vh;
 }
 
-.payment-section {
-    padding: 60px 20px 80px;
+.payment-section{
+    padding:60px 20px 80px;
 }
 
 
 /* =====================================================
    TITLE
-   ===================================================== */
+===================================================== */
 
-.payment-title {
-    text-align: center;
-    margin-bottom: 45px;
+.payment-title{
+    text-align:center;
+    margin-bottom:45px;
 }
 
-.payment-title h1 {
-    color: #d4af37;
-    font-size: 32px;
-    margin-bottom: 10px;
+.payment-title h1{
+    color:#d4af37;
+    font-size:32px;
+    margin-bottom:10px;
 }
 
-.payment-title p {
-    color: #ffffff;
-    opacity: .8;
-    margin: 0;
+.payment-title p{
+    color:#ffffff;
+    opacity:.8;
+    margin:0;
 }
 
 
 /* =====================================================
    LAYOUT
-   ===================================================== */
+===================================================== */
 
-.payment-wrapper {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+.payment-wrapper{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 
-    display: grid;
-
-    grid-template-columns: 1.2fr .8fr;
-
-    gap: 30px;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:30px;
 }
 
-.payment-card {
-    background: #031a35;
+.payment-card{
+    background:#031a35;
 
-    border: 1px solid rgba(212, 175, 55, .35);
+    border:1px solid rgba(212,175,55,.35);
 
-    border-radius: 18px;
+    border-radius:18px;
 
-    padding: 30px;
+    padding:30px;
 
     box-shadow:
-        0 10px 35px rgba(0, 0, 0, .25);
+        0 10px 35px rgba(0,0,0,.25);
 }
 
-.payment-card h2 {
-    color: #d4af37;
-
-    font-size: 22px;
-
-    margin-top: 0;
-
-    margin-bottom: 25px;
-
-    padding-bottom: 15px;
+.payment-card h2{
+    color:#d4af37;
+    font-size:22px;
+    margin-top:0;
+    margin-bottom:25px;
+    padding-bottom:15px;
 
     border-bottom:
-        1px solid rgba(212, 175, 55, .35);
+        1px solid rgba(212,175,55,.35);
 }
 
-.payment-card h2 i {
-    margin-left: 8px;
+.payment-card h2 i{
+    margin-left:8px;
 }
 
 
 /* =====================================================
    FORM
-   ===================================================== */
+===================================================== */
 
-.payment-form-grid {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 20px;
+.payment-form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
 }
 
-.payment-field {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 8px;
+.payment-field{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
 }
 
-.payment-field.full {
-    grid-column: 1 / -1;
+.payment-field.full{
+    grid-column:1 / -1;
 }
 
-.payment-field label {
-    color: #ffffff;
-
-    font-size: 15px;
+.payment-field label{
+    color:#ffffff;
+    font-size:15px;
 }
 
-.payment-field label span {
-    color: #d4af37;
+.payment-field label span{
+    color:#d4af37;
 }
 
 .payment-field input,
 .payment-field select,
-.payment-field textarea {
-    width: 100%;
+.payment-field textarea{
+    width:100%;
+    box-sizing:border-box;
 
-    box-sizing: border-box;
+    padding:13px 15px;
 
-    padding: 13px 15px;
+    background:#021028;
 
-    background: #021028;
+    border:1px solid rgba(212,175,55,.3);
 
-    border: 1px solid rgba(212, 175, 55, .3);
+    border-radius:9px;
 
-    border-radius: 9px;
+    color:#ffffff;
 
-    color: #ffffff;
+    font-family:inherit;
+    font-size:14px;
 
-    font-family: inherit;
+    outline:none;
 
-    font-size: 14px;
-
-    outline: none;
-
-    transition: .3s;
+    transition:.3s;
 }
 
-.payment-field textarea {
-    min-height: 110px;
-
-    resize: vertical;
+.payment-field textarea{
+    min-height:110px;
+    resize:vertical;
 }
 
 .payment-field input::placeholder,
-.payment-field textarea::placeholder {
-    color: #8d99a8;
+.payment-field textarea::placeholder{
+    color:#8d99a8;
 }
 
 .payment-field input:focus,
 .payment-field select:focus,
-.payment-field textarea:focus {
-    border-color: #d4af37;
+.payment-field textarea:focus{
+    border-color:#d4af37;
 
     box-shadow:
-        0 0 12px rgba(212, 175, 55, .12);
+        0 0 12px rgba(212,175,55,.12);
 }
 
 
 /* =====================================================
    SHIPPING
-   ===================================================== */
+===================================================== */
 
-.shipping-title {
-    color: #ffffff;
-
-    margin-top: 28px;
-
-    margin-bottom: 15px;
-
-    font-weight: bold;
+.shipping-title{
+    color:#ffffff;
+    margin-top:28px;
+    margin-bottom:15px;
+    font-weight:bold;
 }
 
-.shipping-options {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 12px;
+.shipping-options{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
 }
 
-.shipping-option {
-    display: flex;
+.shipping-option{
+    display:flex;
+    align-items:center;
+    gap:12px;
 
-    align-items: center;
+    padding:15px;
 
-    gap: 12px;
+    border-radius:10px;
 
-    padding: 15px;
+    border:1px solid rgba(212,175,55,.25);
 
-    border-radius: 10px;
+    background:#021028;
 
-    border: 1px solid rgba(212, 175, 55, .25);
+    cursor:pointer;
 
-    background: #021028;
-
-    cursor: pointer;
-
-    transition: .3s;
+    transition:.3s;
 }
 
-.shipping-option:hover {
-    border-color: #d4af37;
+.shipping-option:hover{
+    border-color:#d4af37;
 }
 
-.shipping-option input {
-    accent-color: #d4af37;
+.shipping-option input{
+    accent-color:#d4af37;
 }
 
-.shipping-text {
-    flex: 1;
-
-    color: #ffffff;
+.shipping-text{
+    flex:1;
+    color:#ffffff;
 }
 
-.shipping-text small {
-    display: block;
-
-    color: #9da8b5;
-
-    margin-top: 4px;
+.shipping-text small{
+    display:block;
+    color:#9da8b5;
+    margin-top:4px;
 }
 
-.shipping-price {
-    color: #d4af37;
-
-    font-weight: bold;
+.shipping-price{
+    color:#d4af37;
+    font-weight:bold;
 }
 
 
 /* =====================================================
    ORDER
-   ===================================================== */
+===================================================== */
 
-#payment-products {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 14px;
+#payment-products{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
 }
 
-.payment-product {
-    display: flex;
+.payment-product{
+    display:flex;
+    align-items:center;
+    gap:14px;
 
-    align-items: center;
-
-    gap: 14px;
-
-    padding-bottom: 14px;
+    padding-bottom:14px;
 
     border-bottom:
-        1px solid rgba(255, 255, 255, .08);
+        1px solid rgba(255,255,255,.08);
 }
 
-.payment-product img {
-    width: 70px;
+.payment-product img{
+    width:70px;
+    height:70px;
 
-    height: 70px;
+    object-fit:cover;
 
-    object-fit: cover;
+    border-radius:10px;
 
-    border-radius: 10px;
+    border:1px solid rgba(212,175,55,.3);
 
-    border: 1px solid rgba(212, 175, 55, .3);
-
-    flex-shrink: 0;
+    flex-shrink:0;
 }
 
-.payment-product-info {
-    flex: 1;
-
-    min-width: 0;
+.payment-product-info{
+    flex:1;
+    min-width:0;
 }
 
-.payment-product-info h3 {
-    color: #ffffff;
-
-    font-size: 15px;
-
-    margin: 0 0 6px;
+.payment-product-info h3{
+    color:#ffffff;
+    font-size:15px;
+    margin:0 0 6px;
 }
 
-.payment-product-info p {
-    color: #aeb7c2;
-
-    font-size: 13px;
-
-    margin: 0;
+.payment-product-info p{
+    color:#aeb7c2;
+    font-size:13px;
+    margin:0;
 }
 
-.payment-product-total {
-    color: #d4af37;
-
-    font-size: 14px;
-
-    font-weight: bold;
-
-    white-space: nowrap;
+.payment-product-total{
+    color:#d4af37;
+    font-size:14px;
+    font-weight:bold;
+    white-space:nowrap;
 }
 
 
 /* =====================================================
    TOTAL
-   ===================================================== */
+===================================================== */
 
-.payment-summary {
-    margin-top: 25px;
+.payment-summary{
+    margin-top:25px;
 }
 
-.summary-row {
-    display: flex;
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-    justify-content: space-between;
+    padding:13px 0;
 
-    align-items: center;
-
-    padding: 13px 0;
-
-    color: #ffffff;
+    color:#ffffff;
 
     border-bottom:
-        1px solid rgba(255, 255, 255, .08);
+        1px solid rgba(255,255,255,.08);
 }
 
-.summary-row strong {
-    color: #ffffff;
+.summary-row strong{
+    color:#ffffff;
 }
 
-.summary-row.final {
-    border-bottom: none;
+.summary-row.final{
+    border-bottom:none;
+    margin-top:5px;
 
-    margin-top: 5px;
-
-    font-size: 19px;
-
-    font-weight: bold;
+    font-size:19px;
+    font-weight:bold;
 }
 
-.summary-row.final strong {
-    color: #d4af37;
+.summary-row.final strong{
+    color:#d4af37;
 }
 
 
 /* =====================================================
    PAY BUTTON
-   ===================================================== */
+===================================================== */
 
-.payment-button {
-    width: 100%;
+.payment-button{
+    width:100%;
 
-    margin-top: 25px;
+    margin-top:25px;
 
-    padding: 15px;
+    padding:15px;
 
-    border: none;
+    border:none;
 
-    border-radius: 10px;
+    border-radius:10px;
 
-    background: #d4af37;
+    background:#d4af37;
 
-    color: #021028;
+    color:#021028;
 
-    font-family: inherit;
+    font-family:inherit;
 
-    font-size: 17px;
+    font-size:17px;
+    font-weight:bold;
 
-    font-weight: bold;
+    cursor:pointer;
 
-    cursor: pointer;
-
-    transition: .3s;
+    transition:.3s;
 }
 
-.payment-button:hover {
-    transform: translateY(-2px);
+.payment-button:hover{
+    transform:translateY(-2px);
 
     box-shadow:
-        0 8px 25px rgba(212, 175, 55, .2);
+        0 8px 25px rgba(212,175,55,.2);
 }
 
-.back-cart {
-    display: block;
+.back-cart{
+    display:block;
 
-    text-align: center;
+    text-align:center;
 
-    margin-top: 18px;
+    margin-top:18px;
 
-    color: #d4af37;
+    color:#d4af37;
 
-    text-decoration: none;
+    text-decoration:none;
 
-    font-size: 14px;
+    font-size:14px;
 }
 
 
 /* =====================================================
    EMPTY
-   ===================================================== */
+===================================================== */
 
-.payment-empty {
-    text-align: center;
-
-    color: #ffffff;
-
-    padding: 35px 10px;
+.payment-empty{
+    text-align:center;
+    color:#ffffff;
+    padding:35px 10px;
 }
 
-.payment-empty i {
-    color: #d4af37;
+.payment-empty i{
+    color:#d4af37;
+    font-size:45px;
+    margin-bottom:15px;
+}
 
-    font-size: 45px;
 
-    margin-bottom: 15px;
+/* =====================================================
+   MOBILE - COMPACT TWO COLUMNS
+===================================================== */
+
+@media(max-width:768px){
+
+    /* ================= HEADER LOGO ================= */
+
+    .logo{
+        transform:translateX(-3px);
+    }
+
+
+    /* ================= PAYMENT ================= */
+
+    .payment-section{
+        padding:25px 0 40px;
+    }
+
+    .payment-title{
+        margin-bottom:22px;
+    }
+
+    .payment-title h1{
+        font-size:24px;
+        margin-bottom:6px;
+    }
+
+    .payment-title p{
+        font-size:11px;
+    }
+
+
+    /* ================= TWO COLUMNS ================= */
+
+    .payment-wrapper{
+        width:96%;
+        max-width:none;
+
+        grid-template-columns:1fr 1fr;
+
+        gap:8px;
+
+        align-items:start;
+    }
+
+
+    /* ================= CARDS ================= */
+
+    .payment-card{
+        width:100%;
+        padding:12px 9px;
+
+        border-radius:11px;
+
+        box-sizing:border-box;
+    }
+
+    .payment-card h2{
+        font-size:14px;
+        margin-bottom:12px;
+        padding-bottom:8px;
+    }
+
+    .payment-card h2 i{
+        margin-left:4px;
+    }
+
+
+    /* ================= FORM ================= */
+
+    .payment-form-grid{
+        grid-template-columns:1fr;
+        gap:9px;
+    }
+
+    .payment-field{
+        gap:4px;
+    }
+
+    .payment-field label{
+        font-size:10px;
+    }
+
+    .payment-field input,
+    .payment-field select,
+    .payment-field textarea{
+        padding:8px 7px;
+        font-size:9px;
+        border-radius:6px;
+    }
+
+    .payment-field textarea{
+        min-height:65px;
+    }
+
+
+    /* ================= SHIPPING ================= */
+
+    .shipping-title{
+        font-size:10px;
+        margin-top:12px;
+        margin-bottom:7px;
+    }
+
+    .shipping-options{
+        gap:6px;
+    }
+
+    .shipping-option{
+        gap:5px;
+        padding:7px;
+        border-radius:6px;
+    }
+
+    .shipping-option input{
+        width:11px;
+        height:11px;
+    }
+
+    .shipping-text{
+        font-size:9px;
+    }
+
+    .shipping-text small{
+        font-size:7px;
+        margin-top:2px;
+    }
+
+    .shipping-price{
+        font-size:8px;
+    }
+
+
+    /* ================= PRODUCTS ================= */
+
+    #payment-products{
+        gap:7px;
+    }
+
+    .payment-product{
+        gap:6px;
+        padding-bottom:7px;
+    }
+
+    .payment-product img{
+        width:42px;
+        height:48px;
+        border-radius:6px;
+    }
+
+    .payment-product-info h3{
+        font-size:9px;
+        margin-bottom:2px;
+
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    .payment-product-info p{
+        font-size:8px;
+    }
+
+    .payment-product-total{
+        font-size:8px;
+    }
+
+
+    /* ================= TOTAL ================= */
+
+    .payment-summary{
+        margin-top:10px;
+    }
+
+    .summary-row{
+        padding:7px 0;
+        font-size:9px;
+    }
+
+    .summary-row.final{
+        margin-top:2px;
+        font-size:12px;
+    }
+
+
+    /* ================= BUTTON ================= */
+
+    .payment-button{
+        margin-top:10px;
+        padding:9px 5px;
+        border-radius:7px;
+        font-size:10px;
+    }
+
+    .back-cart{
+        margin-top:8px;
+        font-size:9px;
+    }
+
+
+    /* ================= EMPTY ================= */
+
+    .payment-empty{
+        padding:20px 5px;
+        font-size:10px;
+    }
+
+    .payment-empty i{
+        font-size:30px;
+        margin-bottom:8px;
+    }
+
+
+    /* =================================================
+       FOOTER
+    ================================================= */
+
+    footer.footer{
+        width:100%;
+        padding:25px 4% 12px;
+        margin:0;
+        overflow:hidden;
+    }
+
+    .footer-content{
+        width:100%;
+
+        display:flex;
+        flex-direction:column;
+
+        align-items:center;
+        justify-content:center;
+
+        gap:14px;
+    }
+
+    .footer-brand{
+        width:100%;
+        text-align:center;
+    }
+
+    .footer-brand h2{
+        font-size:18px;
+        margin-bottom:4px;
+    }
+
+    .footer-brand p{
+        font-size:10px;
+        line-height:1.6;
+        margin:0;
+    }
+
+    .footer-links{
+        width:100%;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        flex-wrap:wrap;
+
+        gap:7px 14px;
+    }
+
+    .footer-links a{
+        font-size:10px;
+        white-space:nowrap;
+    }
+
+    .footer-social{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:8px;
+    }
+
+    .footer-social a{
+        width:32px;
+        height:32px;
+
+        font-size:12px;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .footer-bottom{
+        width:100%;
+
+        margin-top:12px;
+        padding-top:10px;
+
+        font-size:8px;
+        line-height:1.6;
+
+        text-align:center;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:500px){
+
+    .logo{
+        transform:translateX(-3px);
+    }
+
+
+    .payment-section{
+        padding:20px 0 35px;
+    }
+
+    .payment-title{
+        margin-bottom:18px;
+    }
+
+    .payment-title h1{
+        font-size:21px;
+    }
+
+    .payment-title p{
+        font-size:10px;
+    }
+
+
+    .payment-wrapper{
+        width:97%;
+        gap:7px;
+    }
+
+
+    .payment-card{
+        padding:10px 7px;
+        border-radius:9px;
+    }
+
+    .payment-card h2{
+        font-size:12px;
+        margin-bottom:10px;
+        padding-bottom:7px;
+    }
+
+
+    .payment-form-grid{
+        gap:7px;
+    }
+
+    .payment-field{
+        gap:3px;
+    }
+
+    .payment-field label{
+        font-size:9px;
+    }
+
+    .payment-field input,
+    .payment-field select,
+    .payment-field textarea{
+        padding:7px 6px;
+        font-size:8px;
+    }
+
+    .payment-field textarea{
+        min-height:55px;
+    }
+
+
+    .shipping-title{
+        font-size:9px;
+        margin-top:10px;
+    }
+
+    .shipping-option{
+        padding:6px;
+    }
+
+    .shipping-text{
+        font-size:8px;
+    }
+
+    .shipping-text small{
+        font-size:6px;
+    }
+
+    .shipping-price{
+        font-size:7px;
+    }
+
+
+    .payment-product img{
+        width:38px;
+        height:44px;
+    }
+
+    .payment-product-info h3{
+        font-size:8px;
+    }
+
+    .payment-product-info p{
+        font-size:7px;
+    }
+
+    .payment-product-total{
+        font-size:7px;
+    }
+
+
+    .summary-row{
+        font-size:8px;
+        padding:6px 0;
+    }
+
+    .summary-row.final{
+        font-size:10px;
+    }
+
+
+    .payment-button{
+        font-size:9px;
+        padding:8px 4px;
+    }
+
+    .back-cart{
+        font-size:8px;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer.footer{
+        padding:22px 4% 10px;
+    }
+
+    .footer-content{
+        gap:11px;
+    }
+
+    .footer-brand h2{
+        font-size:16px;
+    }
+
+    .footer-brand p{
+        font-size:9px;
+    }
+
+    .footer-links{
+        gap:6px 11px;
+    }
+
+    .footer-links a{
+        font-size:9px;
+    }
+
+    .footer-social{
+        gap:7px;
+    }
+
+    .footer-social a{
+        width:29px;
+        height:29px;
+        font-size:11px;
+    }
+
+    .footer-bottom{
+        margin-top:9px;
+        padding-top:8px;
+        font-size:7px;
+    }
+}
+
+
+/* =====================================================
+   VERY SMALL MOBILE
+===================================================== */
+
+@media(max-width:320px){
+
+    .payment-wrapper{
+        width:98%;
+        gap:6px;
+    }
+
+    .payment-card{
+        padding:8px 5px;
+    }
+
+    .payment-card h2{
+        font-size:11px;
+    }
+
+    .payment-field label{
+        font-size:8px;
+    }
+
+    .payment-field input,
+    .payment-field select,
+    .payment-field textarea{
+        font-size:7px;
+        padding:6px 5px;
+    }
+
+    .payment-field textarea{
+        min-height:48px;
+    }
+
+    .shipping-text{
+        font-size:7px;
+    }
+
+    .shipping-text small{
+        font-size:5px;
+    }
+
+    .shipping-price{
+        font-size:6px;
+    }
+
+    .payment-product img{
+        width:34px;
+        height:40px;
+    }
+
+    .payment-product-info h3{
+        font-size:7px;
+    }
+
+    .payment-product-info p{
+        font-size:6px;
+    }
+
+    .payment-product-total{
+        font-size:6px;
+    }
+
+    .summary-row{
+        font-size:7px;
+    }
+
+    .summary-row.final{
+        font-size:9px;
+    }
+
+    .payment-button{
+        font-size:8px;
+        padding:7px 3px;
+    }
+
+    .back-cart{
+        font-size:7px;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer.footer{
+        padding:18px 4% 8px;
+    }
+
+    .footer-brand h2{
+        font-size:14px;
+    }
+
+    .footer-brand p{
+        font-size:8px;
+    }
+
+    .footer-links{
+        gap:5px 9px;
+    }
+
+    .footer-links a{
+        font-size:8px;
+    }
+
+    .footer-social{
+        gap:6px;
+    }
+
+    .footer-social a{
+        width:28px;
+        height:28px;
+        font-size:10px;
+    }
+
+    .footer-bottom{
+        margin-top:8px;
+        padding-top:7px;
+        font-size:7px;
+    }
 }

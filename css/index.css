@@ -326,7 +326,7 @@ header{
 .hero-info{
     display:flex;
     gap:20px;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
 }
 
 .hero-info div{
@@ -334,13 +334,13 @@ header{
     padding:14px 20px;
     border-radius:12px;
     box-shadow:var(--shadow);
+    white-space:nowrap;
 }
 
 .hero-info i{
     color:var(--primary);
     margin-left:8px;
 }
-
 .hero-image{
     display:flex;
     justify-content:center;

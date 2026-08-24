@@ -968,3 +968,17 @@
         align-items:center !important;
     }
 }
+/* =====================================================
+   HIDE PAYMENT WHEN CART IS EMPTY
+===================================================== */
+
+#payment-section{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* وقتی سبد خالی است، JS این بخش را مخفی می‌کند */
+#payment-section[style*="display: none"]{
+    display:none !important;
+}

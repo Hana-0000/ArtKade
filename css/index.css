@@ -2004,3 +2004,143 @@ footer.footer{
 .hero{
     background:var(--card-dark);
 }
+/* =====================================================
+   ABOUT - MOBILE FINAL
+===================================================== */
+
+@media(max-width:768px){
+
+    /* متن توضیحات درباره ما */
+    #about .about-text p{
+        width:100%;
+        font-size:9px;
+        line-height:2;
+        text-align:right;
+        margin-bottom:18px;
+    }
+
+    /* سه باکس در یک ردیف */
+    #about .features{
+        width:94%;
+        margin:0 auto;
+
+        display:grid !important;
+        grid-template-columns:repeat(3, 1fr) !important;
+
+        gap:8px;
+
+        align-items:stretch;
+    }
+
+    /* باکس‌ها */
+    #about .feature{
+        width:100%;
+        min-width:0;
+
+        padding:14px 5px;
+
+        min-height:65px;
+
+        border-radius:12px;
+
+        display:flex;
+        flex-direction:row;
+
+        align-items:center;
+        justify-content:center;
+
+        gap:6px;
+    }
+
+    /* آیکون */
+    #about .feature i{
+        font-size:21px;
+        margin:0;
+
+        flex-shrink:0;
+    }
+
+    /* عنوان باکس */
+    #about .feature h3{
+        font-size:9px;
+
+        line-height:1.5;
+
+        margin:0;
+
+        white-space:nowrap;
+    }
+
+    /* توضیحات داخل باکس‌ها مخفی */
+    #about .feature p{
+        display:none;
+    }
+}
+
+
+/* =====================================================
+   ABOUT - SMALL MOBILE
+===================================================== */
+
+@media(max-width:500px){
+
+    #about .about-text p{
+        font-size:8px;
+        line-height:2;
+        text-align:right;
+    }
+
+    #about .features{
+        width:95%;
+        gap:6px;
+    }
+
+    #about .feature{
+        padding:11px 4px;
+        min-height:58px;
+
+        gap:4px;
+
+        border-radius:10px;
+    }
+
+    #about .feature i{
+        font-size:18px;
+    }
+
+    #about .feature h3{
+        font-size:8px;
+    }
+}
+
+
+/* =====================================================
+   ABOUT - VERY SMALL MOBILE
+===================================================== */
+
+@media(max-width:360px){
+
+    #about .features{
+        width:96%;
+        gap:5px;
+    }
+
+    #about .feature{
+        padding:9px 3px;
+        min-height:52px;
+        gap:3px;
+    }
+
+    #about .feature i{
+        font-size:16px;
+    }
+
+    #about .feature h3{
+        font-size:7px;
+    }
+
+    #about .about-text p{
+        font-size:8px;
+        text-align:right;
+    }
+}

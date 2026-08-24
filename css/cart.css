@@ -944,3 +944,27 @@
         margin:0 auto;
     }
 }
+/* =====================================================
+   CART PAYMENT BUTTON - MOBILE CENTER
+===================================================== */
+
+@media(max-width:768px){
+
+    .cart-page .payment-section{
+        width:100% !important;
+        display:flex !important;
+        justify-content:center !important;
+        align-items:center !important;
+        margin:20px auto 25px !important;
+        padding:0 !important;
+        box-sizing:border-box;
+    }
+
+    .cart-page .pay-button{
+        width:200px !important;
+        margin:0 auto !important;
+        display:flex !important;
+        justify-content:center !important;
+        align-items:center !important;
+    }
+}

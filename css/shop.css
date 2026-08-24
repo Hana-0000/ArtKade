@@ -487,6 +487,94 @@
     #notFound{
         font-size:15px;
     }
+
+
+    /* =================================================
+       SHOP FOOTER - MOBILE
+    ================================================= */
+
+    footer.footer{
+        width:100%;
+        padding:25px 4% 12px;
+        margin:0;
+        overflow:hidden;
+    }
+
+    .footer-content{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:14px;
+    }
+
+
+    /* ================= BRAND ================= */
+
+    .footer-brand{
+        width:100%;
+        text-align:center;
+    }
+
+    .footer-brand h2{
+        font-size:18px;
+        margin-bottom:4px;
+    }
+
+    .footer-brand p{
+        font-size:10px;
+        line-height:1.6;
+        margin:0;
+    }
+
+
+    /* ================= LINKS ================= */
+
+    .footer-links{
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:7px 14px;
+    }
+
+    .footer-links a{
+        font-size:10px;
+        white-space:nowrap;
+    }
+
+
+    /* ================= SOCIAL ================= */
+
+    .footer-social{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:8px;
+    }
+
+    .footer-social a{
+        width:32px;
+        height:32px;
+        font-size:12px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+
+    /* ================= BOTTOM ================= */
+
+    .footer-bottom{
+        width:100%;
+        margin-top:12px;
+        padding-top:10px;
+        font-size:8px;
+        line-height:1.6;
+        text-align:center;
+    }
 }
 
 
@@ -609,6 +697,49 @@
         padding:5px 8px;
         font-size:9px;
     }
+
+
+    /* ================= FOOTER ================= */
+
+    footer.footer{
+        padding:22px 4% 10px;
+    }
+
+    .footer-content{
+        gap:11px;
+    }
+
+    .footer-brand h2{
+        font-size:16px;
+    }
+
+    .footer-brand p{
+        font-size:9px;
+    }
+
+    .footer-links{
+        gap:6px 11px;
+    }
+
+    .footer-links a{
+        font-size:9px;
+    }
+
+    .footer-social{
+        gap:7px;
+    }
+
+    .footer-social a{
+        width:29px;
+        height:29px;
+        font-size:11px;
+    }
+
+    .footer-bottom{
+        margin-top:9px;
+        padding-top:8px;
+        font-size:7px;
+    }
 }
 
 
@@ -650,6 +781,45 @@
         height:32px;
         font-size:8px;
     }
+
+
+    /* ================= FOOTER ================= */
+
+    footer.footer{
+        padding:20px 4% 9px;
+    }
+
+    .footer-brand h2{
+        font-size:15px;
+    }
+
+    .footer-brand p{
+        font-size:8px;
+    }
+
+    .footer-links{
+        gap:5px 10px;
+    }
+
+    .footer-links a{
+        font-size:8px;
+    }
+
+    .footer-social{
+        gap:6px;
+    }
+
+    .footer-social a{
+        width:28px;
+        height:28px;
+        font-size:10px;
+    }
+
+    .footer-bottom{
+        margin-top:8px;
+        padding-top:7px;
+        font-size:7px;
+    }
 }
 
 
@@ -688,143 +858,50 @@
         height:30px;
         font-size:7px;
     }
+
+
+    /* ================= FOOTER ================= */
+
+    footer.footer{
+        padding:18px 4% 8px;
+    }
+
+    .footer-brand h2{
+        font-size:14px;
+    }
+
+    .footer-brand p{
+        font-size:7px;
+    }
+
+    .footer-links{
+        gap:4px 8px;
+    }
+
+    .footer-links a{
+        font-size:7px;
+    }
+
+    .footer-social{
+        gap:5px;
+    }
+
+    .footer-social a{
+        width:27px;
+        height:27px;
+        font-size:9px;
+    }
+
+    .footer-bottom{
+        margin-top:7px;
+        padding-top:6px;
+        font-size:6px;
+    }
 }
-
-
-/* =====================================================
-   SHOP FOOTER MOBILE - COMPACT
-===================================================== */
-
 @media(max-width:768px){
 
-    footer.footer{
-        width:100%;
-        padding:25px 4% 12px;
-        margin:0;
-        overflow:hidden;
+    .logo{
+        transform:translateX(-3px);
     }
 
-    .footer-content{
-        width:100%;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-        justify-content:center;
-        gap:14px;
-    }
-
-
-    /* ================= BRAND ================= */
-
-    .footer-brand{
-        width:100%;
-        text-align:center;
-    }
-
-    .footer-brand h2{
-        font-size:20px;
-        margin-bottom:4px;
-    }
-
-    .footer-brand p{
-        font-size:11px;
-        line-height:1.6;
-        margin:0;
-    }
-
-
-    /* ================= LINKS ================= */
-
-    .footer-links{
-        width:100%;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        flex-wrap:wrap;
-        gap:7px 14px;
-    }
-
-    .footer-links a{
-        font-size:11px;
-        white-space:nowrap;
-    }
-
-
-    /* ================= SOCIAL ================= */
-
-    .footer-social{
-        display:flex;
-        align-items:center;
-        justify-content:center;
-        gap:8px;
-    }
-
-    .footer-social a{
-        width:32px;
-        height:32px;
-        font-size:12px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-    }
-
-
-    /* ================= BOTTOM ================= */
-
-    .footer-bottom{
-        width:100%;
-        margin-top:12px;
-        padding-top:10px;
-        font-size:9px;
-        line-height:1.6;
-        text-align:center;
-    }
-}
-
-
-/* =====================================================
-   VERY SMALL FOOTER
-===================================================== */
-
-@media(max-width:400px){
-
-    footer.footer{
-        padding:22px 4% 10px;
-    }
-
-    .footer-content{
-        gap:11px;
-    }
-
-    .footer-brand h2{
-        font-size:18px;
-    }
-
-    .footer-brand p{
-        font-size:10px;
-    }
-
-    .footer-links{
-        gap:6px 11px;
-    }
-
-    .footer-links a{
-        font-size:10px;
-    }
-
-    .footer-social{
-        gap:7px;
-    }
-
-    .footer-social a{
-        width:29px;
-        height:29px;
-        font-size:11px;
-    }
-
-    .footer-bottom{
-        margin-top:9px;
-        padding-top:8px;
-        font-size:8px;
-    }
 }

@@ -639,3 +639,141 @@
         font-size:14px;
     }
 }
+/* =====================================================
+   CART MOBILE - HEADER LOGO + FOOTER
+===================================================== */
+
+@media(max-width:768px){
+
+    /* ================= HEADER LOGO ================= */
+
+    .logo{
+        transform:translateX(-3px);
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    footer.footer{
+        width:100%;
+        padding:25px 4% 12px;
+        margin:0;
+        overflow:hidden;
+    }
+
+    .footer-content{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        gap:14px;
+    }
+
+    .footer-brand{
+        width:100%;
+        text-align:center;
+    }
+
+    .footer-brand h2{
+        font-size:18px;
+        margin-bottom:4px;
+    }
+
+    .footer-brand p{
+        font-size:10px;
+        line-height:1.6;
+        margin:0;
+    }
+
+    .footer-links{
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:7px 14px;
+    }
+
+    .footer-links a{
+        font-size:10px;
+        white-space:nowrap;
+    }
+
+    .footer-social{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        gap:8px;
+    }
+
+    .footer-social a{
+        width:32px;
+        height:32px;
+        font-size:12px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+
+    .footer-bottom{
+        width:100%;
+        margin-top:12px;
+        padding-top:10px;
+        font-size:8px;
+        line-height:1.6;
+        text-align:center;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media(max-width:500px){
+
+    .logo{
+        transform:translateX(-3px);
+    }
+
+    footer.footer{
+        padding:22px 4% 10px;
+    }
+
+    .footer-content{
+        gap:11px;
+    }
+
+    .footer-brand h2{
+        font-size:16px;
+    }
+
+    .footer-brand p{
+        font-size:9px;
+    }
+
+    .footer-links{
+        gap:6px 11px;
+    }
+
+    .footer-links a{
+        font-size:9px;
+    }
+
+    .footer-social{
+        gap:7px;
+    }
+
+    .footer-social a{
+        width:29px;
+        height:29px;
+        font-size:11px;
+    }
+
+    .footer-bottom{
+        margin-top:9px;
+        padding-top:8px;
+        font-size:7px;
+    }
+}

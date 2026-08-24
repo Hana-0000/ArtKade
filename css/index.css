@@ -292,6 +292,7 @@ header{
     min-height:90vh;
     display:flex;
     align-items:center;
+    background:var(--card-dark);
 }
 
 .hero-content{
@@ -413,6 +414,10 @@ header{
    ABOUT
 ===================================================== */
 
+.about{
+    display:block !important;
+}
+
 .about-content{
     display:grid;
     grid-template-columns:1fr;
@@ -446,11 +451,6 @@ header{
    INSTAGRAM
 ===================================================== */
 
-/*
-   باکس اینستاگرام عمداً کوتاه‌تر شده
-   تا کشیده و خیلی بلند نباشد.
-*/
-
 .instagram-box{
     width:100%;
     max-width:900px;
@@ -464,14 +464,10 @@ header{
     );
 
     border-radius:22px;
-
     text-align:center;
-
     padding:32px 25px;
 
     box-shadow:var(--shadow);
-
-    min-height:auto;
 }
 
 .instagram-box i{
@@ -558,11 +554,8 @@ footer.footer{
     width:100%;
     background:var(--navy);
     color:var(--text);
-
     padding:40px 6% 18px;
-
     margin:0;
-
     direction:rtl;
 }
 
@@ -588,7 +581,6 @@ footer.footer{
 .footer-brand{
     flex:1;
     min-width:0;
-
     text-align:right;
 }
 
@@ -621,7 +613,6 @@ footer.footer{
 
 .footer-content nav .menu{
     display:flex;
-
     align-items:center;
     justify-content:center;
 
@@ -657,7 +648,6 @@ footer.footer{
     flex:1;
 
     display:flex;
-
     align-items:center;
     justify-content:flex-start;
 
@@ -685,9 +675,7 @@ footer.footer{
 .footer-social a:hover{
     background:var(--primary);
     color:var(--navy);
-
     border-color:var(--primary);
-
     transform:translateY(-3px);
 }
 
@@ -795,7 +783,7 @@ footer.footer{
 
 
 /* =====================================================
-   MOBILE / TABLET
+   MOBILE
 ===================================================== */
 
 @media(max-width:768px){
@@ -814,7 +802,6 @@ footer.footer{
 
     .navbar{
         width:94%;
-        max-width:1200px;
         margin:auto;
 
         display:flex;
@@ -833,9 +820,7 @@ footer.footer{
     .logo{
         display:flex;
         align-items:center;
-
         gap:7px;
-
         flex-shrink:0;
     }
 
@@ -913,13 +898,9 @@ footer.footer{
 
     .hero-content{
         display:grid;
-
         grid-template-columns:1.1fr .9fr;
-
         gap:15px;
-
         align-items:center;
-
         text-align:right;
     }
 
@@ -949,13 +930,9 @@ footer.footer{
     .hero-buttons{
         display:flex;
         flex-direction:row;
-
         justify-content:flex-start;
-
         gap:6px;
-
         margin-bottom:15px;
-
         flex-wrap:nowrap;
     }
 
@@ -987,64 +964,125 @@ footer.footer{
     }
 
 
-    /* ================= FEATURES ================= */
+    /* =================================================
+       ABOUT - MOBILE
+    ================================================= */
 
-    .features{
-        display:grid;
-        grid-template-columns:repeat(4,1fr);
-        gap:10px;
+    #about{
+        padding:25px 0 35px;
+        scroll-margin-top:75px;
     }
 
-    .feature{
-        padding:20px 7px;
-        border-radius:14px;
-        min-width:0;
+    #about .section-title{
+        margin-bottom:18px;
     }
 
-    .feature i{
-        font-size:32px;
-        margin-bottom:10px;
+    #about .section-title h2{
+        font-size:22px;
+        line-height:1.5;
+        margin-bottom:6px;
+        white-space:nowrap;
     }
 
-    .feature h3{
-        font-size:14px;
-        line-height:1.7;
-        margin-bottom:7px;
-    }
-
-    .feature p{
-        font-size:9px;
+    #about .section-title p{
+        font-size:11px;
         line-height:1.8;
     }
 
-
-    /* ================= ABOUT ================= */
-
-    .about{
-        display:none;
-    }
-
-    .about-content{
+    #about .about-content{
+        width:100%;
+        display:grid;
         grid-template-columns:1fr;
         text-align:center;
     }
 
-    .about-text{
-        width:94%;
+    #about .about-text{
+        width:92%;
         max-width:850px;
-        margin:auto;
+        margin:0 auto;
     }
 
-    .about-text h2{
-        font-size:30px;
+    #about .about-text h2{
+        font-size:23px;
+        line-height:1.6;
+        margin-bottom:10px;
         text-align:center;
     }
 
-    .about-text p{
-        font-size:12px;
+    #about .about-text p{
+        width:100%;
+        font-size:9px;
         line-height:2;
-        text-align:center;
-        margin-bottom:25px;
+        text-align:right;
+        margin-bottom:18px;
+    }
+
+
+    /* =================================================
+       ABOUT FEATURES
+       ۳ باکس حتماً در یک ردیف
+    ================================================= */
+
+    #about .features{
+        width:94% !important;
+        margin:0 auto !important;
+
+        display:flex !important;
+        flex-direction:row !important;
+        flex-wrap:nowrap !important;
+
+        align-items:stretch !important;
+
+        gap:7px !important;
+    }
+
+    #about .feature{
+        flex:1 1 0 !important;
+
+        width:0 !important;
+        min-width:0 !important;
+
+        height:58px !important;
+        min-height:58px !important;
+
+        padding:5px 3px !important;
+
+        border-radius:11px !important;
+
+        display:flex !important;
+        flex-direction:row !important;
+
+        align-items:center !important;
+        justify-content:center !important;
+
+        gap:4px !important;
+
+        overflow:hidden !important;
+    }
+
+    #about .feature i{
+        font-size:18px !important;
+
+        margin:0 !important;
+
+        flex-shrink:0 !important;
+    }
+
+    #about .feature h3{
+        font-size:8px !important;
+
+        line-height:1.5 !important;
+
+        margin:0 !important;
+
+        white-space:nowrap !important;
+
+        overflow:hidden !important;
+        text-overflow:clip !important;
+    }
+
+    #about .feature p{
+        display:none !important;
     }
 
 
@@ -1068,12 +1106,6 @@ footer.footer{
         font-size:11px;
     }
 
-    /*
-       قبلاً min-height:255px داشت.
-       همین باعث کشیده شدن زیاد می‌شد.
-       حالا ارتفاع طبیعی و جمع‌وجور است.
-    */
-
     .instagram-box{
         width:92%;
         max-width:700px;
@@ -1083,8 +1115,6 @@ footer.footer{
         padding:28px 18px;
 
         border-radius:16px;
-
-        min-height:0;
 
         display:flex;
         flex-direction:column;
@@ -1164,11 +1194,8 @@ footer.footer{
 
     footer.footer{
         width:100%;
-
         padding:28px 5% 12px;
-
         margin:0;
-
         overflow:hidden;
     }
 
@@ -1184,40 +1211,27 @@ footer.footer{
         gap:10px;
     }
 
-
-    /* BRAND */
-
     .footer-brand{
         flex:1;
-
         min-width:0;
-
         text-align:right;
     }
 
     .footer-brand h2{
         font-size:17px;
         line-height:1.5;
-
         margin-bottom:2px;
-
         white-space:nowrap;
     }
 
     .footer-brand p{
         font-size:7px;
-
         line-height:1.7;
-
         white-space:nowrap;
     }
 
-
-    /* LINKS */
-
     .footer-content nav{
         flex:1.4;
-
         min-width:0;
     }
 
@@ -1243,12 +1257,8 @@ footer.footer{
 
     .footer-content nav .menu li a{
         font-size:7px;
-
         white-space:nowrap;
     }
-
-
-    /* SOCIAL */
 
     .footer-social{
         flex:.8;
@@ -1272,9 +1282,6 @@ footer.footer{
         font-size:9px;
     }
 
-
-    /* BOTTOM */
-
     .footer-bottom{
         width:100%;
 
@@ -1292,7 +1299,7 @@ footer.footer{
 
 
 /* =====================================================
-   MOBILE
+   SMALL MOBILE
 ===================================================== */
 
 @media(max-width:500px){
@@ -1325,7 +1332,6 @@ footer.footer{
 
     .menu{
         gap:12px;
-        justify-content:flex-end;
     }
 
     .menu li a{
@@ -1338,9 +1344,7 @@ footer.footer{
     #cart-count{
         min-width:15px;
         height:15px;
-
         padding:1px 4px;
-
         font-size:8px;
     }
 
@@ -1405,32 +1409,77 @@ footer.footer{
     }
 
 
-    /* FEATURES */
+    /* =================================================
+       ABOUT
+    ================================================= */
 
-    .features{
-        grid-template-columns:repeat(4,1fr);
-        gap:7px;
+    #about{
+        padding:22px 0 30px;
     }
 
-    .feature{
-        padding:16px 5px;
-        border-radius:12px;
+    #about .section-title{
+        margin-bottom:15px;
     }
 
-    .feature i{
-        font-size:27px;
+    #about .section-title h2{
+        font-size:20px;
+    }
+
+    #about .section-title p{
+        font-size:10px;
+    }
+
+    #about .about-text{
+        width:90%;
+    }
+
+    #about .about-text h2{
+        font-size:20px;
         margin-bottom:8px;
     }
 
-    .feature h3{
-        font-size:11px;
-        line-height:1.7;
-        margin-bottom:6px;
+    #about .about-text p{
+        width:100%;
+        font-size:8px;
+        line-height:2;
+        text-align:right;
+        margin-bottom:15px;
     }
 
-    .feature p{
-        font-size:7px;
-        line-height:1.8;
+
+    /* =================================================
+       ABOUT FEATURES - ONE ROW
+    ================================================= */
+
+    #about .features{
+        width:95% !important;
+        gap:5px !important;
+
+        display:flex !important;
+        flex-direction:row !important;
+        flex-wrap:nowrap !important;
+    }
+
+    #about .feature{
+        flex:1 1 0 !important;
+
+        width:0 !important;
+
+        height:52px !important;
+        min-height:52px !important;
+
+        padding:4px 2px !important;
+
+        gap:3px !important;
+    }
+
+    #about .feature i{
+        font-size:16px !important;
+    }
+
+    #about .feature h3{
+        font-size:7px !important;
+        white-space:nowrap !important;
     }
 
 
@@ -1572,9 +1621,7 @@ footer.footer{
     #cart-count{
         min-width:13px;
         height:13px;
-
         font-size:7px;
-
         padding:0 3px;
     }
 
@@ -1615,31 +1662,67 @@ footer.footer{
     }
 
 
-    /* FEATURES */
+    /* =================================================
+       ABOUT - VERY SMALL
+    ================================================= */
 
-    .features{
-        grid-template-columns:repeat(4,1fr);
-        gap:5px;
+    #about{
+        padding:18px 0 25px;
     }
 
-    .feature{
-        padding:14px 3px;
-        border-radius:10px;
+    #about .section-title h2{
+        font-size:19px;
     }
 
-    .feature i{
-        font-size:23px;
-        margin-bottom:6px;
-    }
-
-    .feature h3{
+    #about .section-title p{
         font-size:9px;
-        line-height:1.6;
     }
 
-    .feature p{
-        font-size:6px;
-        line-height:1.7;
+    #about .about-text{
+        width:92%;
+    }
+
+    #about .about-text p{
+        font-size:8px;
+        line-height:1.8;
+        text-align:right;
+    }
+
+
+    /* =================================================
+       ABOUT FEATURES - STILL ONE ROW
+    ================================================= */
+
+    #about .features{
+        width:97% !important;
+        gap:4px !important;
+
+        display:flex !important;
+        flex-direction:row !important;
+        flex-wrap:nowrap !important;
+    }
+
+    #about .feature{
+        flex:1 1 0 !important;
+
+        width:0 !important;
+
+        height:48px !important;
+        min-height:48px !important;
+
+        padding:3px 2px !important;
+
+        gap:3px !important;
+    }
+
+    #about .feature i{
+        font-size:14px !important;
+    }
+
+    #about .feature h3{
+        font-size:6.5px !important;
+
+        white-space:nowrap !important;
     }
 
 
@@ -1731,592 +1814,5 @@ footer.footer{
         margin-top:15px;
         padding-top:7px;
         font-size:5.5px;
-    }
-}
-/* =====================================================
-   ABOUT - KEEP VISIBLE
-===================================================== */
-
-.about {
-    display: block !important;
-}
-/* =====================================================
-   ABOUT - MOBILE RESPONSIVE
-===================================================== */
-
-@media(max-width:768px){
-
-    /* خود بخش درباره ما */
-    #about{
-        padding:25px 0 35px;
-        scroll-margin-top:75px;
-    }
-
-    /* عنوان درباره ما */
-    #about .section-title{
-        margin-bottom:18px;
-    }
-
-    #about .section-title h2{
-        font-size:25px;
-        line-height:1.5;
-        margin-bottom:6px;
-    }
-
-    #about .section-title p{
-        font-size:11px;
-        line-height:1.8;
-    }
-
-    /* محتوای درباره ما */
-    #about .about-content{
-        width:100%;
-        display:grid;
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-    #about .about-text{
-        width:92%;
-        max-width:850px;
-        margin:0 auto;
-    }
-
-    #about .about-text h2{
-        font-size:23px;
-        line-height:1.6;
-        margin-bottom:10px;
-        text-align:center;
-    }
-
-   #about .about-text p{
-    width:100%;
-    font-size:9px;
-    line-height:1.8;
-    text-align:center;
-    margin-bottom:18px;
-}
-
-    /* اگر داخل About از باکس‌های feature استفاده شده */
-    #about .features{
-        width:92%;
-        margin:0 auto;
-
-        display:grid;
-        grid-template-columns:repeat(2,1fr);
-        gap:10px;
-    }
-
-    #about .feature{
-        padding:18px 10px;
-        border-radius:14px;
-        min-height:90px;
-    }
-
-    #about .feature i{
-        font-size:28px;
-        margin-bottom:7px;
-    }
-
-    #about .feature h3{
-        font-size:12px;
-        line-height:1.6;
-        margin-bottom:0;
-    }
-
-    #about .feature p{
-        font-size:8px;
-        line-height:1.7;
-        margin-bottom:0;
-    }
-}
-
-
-/* =====================================================
-   ABOUT - SMALL MOBILE
-===================================================== */
-
-@media(max-width:500px){
-
-    #about{
-        padding:22px 0 30px;
-    }
-
-    #about .section-title{
-        margin-bottom:15px;
-    }
-
-    #about .section-title h2{
-        font-size:22px;
-    }
-
-    #about .section-title p{
-        font-size:10px;
-    }
-
-    #about .about-text{
-        width:90%;
-    }
-
-    #about .about-text h2{
-        font-size:20px;
-        margin-bottom:8px;
-    }
-
-    #about .about-text p{
-    width:100%;
-    font-size:8px;
-    line-height:1.8;
-    text-align:center;
-}
-
-    #about .features{
-        width:92%;
-        grid-template-columns:repeat(2,1fr);
-        gap:8px;
-    }
-
-    #about .feature{
-        padding:15px 7px;
-        min-height:80px;
-        border-radius:12px;
-    }
-
-    #about .feature i{
-        font-size:24px;
-        margin-bottom:5px;
-    }
-
-    #about .feature h3{
-        font-size:11px;
-    }
-}
-
-
-/* =====================================================
-   VERY SMALL MOBILE
-===================================================== */
-
-@media(max-width:360px){
-
-    #about{
-        padding:18px 0 25px;
-    }
-
-    #about .section-title h2{
-        font-size:20px;
-    }
-
-    #about .section-title p{
-        font-size:9px;
-    }
-
-    #about .about-text{
-        width:92%;
-    }
-
-    #about .about-text p{
-        font-size:9px;
-        line-height:1.8;
-    }
-
-    #about .features{
-        gap:6px;
-    }
-
-    #about .feature{
-        padding:13px 5px;
-        min-height:72px;
-    }
-
-    #about .feature i{
-        font-size:21px;
-    }
-
-    #about .feature h3{
-        font-size:9px;
-    }
-}
-
-
-/* =====================================================
-   ABOUT MUST STAY VISIBLE
-===================================================== */
-
-.about{
-    display:block !important;
-}
-/* =====================================================
-   ABOUT - MOBILE COMPACT
-===================================================== */
-
-@media(max-width:768px){
-
-    /* عنوان درباره ما در یک خط */
-    #about .section-title h2{
-        font-size:22px;
-        white-space:nowrap;
-    }
-
-    /* متن درباره ما جمع و جورتر */
-    #about .about-text p{
-        font-size:9px;
-        line-height:1.8;
-        margin-bottom:15px;
-    }
-
-    /* سه باکس در یک ردیف */
-    #about .features{
-        width:94%;
-        margin:0 auto;
-
-        display:grid;
-        grid-template-columns:repeat(3,1fr);
-
-        gap:7px;
-    }
-
-    /* کوچک کردن باکس‌ها */
-    #about .feature{
-        padding:12px 5px;
-        min-height:65px;
-        border-radius:10px;
-    }
-
-    /* کوچک کردن آیکون‌ها */
-    #about .feature i{
-        font-size:21px;
-        margin-bottom:4px;
-    }
-
-    /* متن باکس‌ها */
-    #about .feature h3{
-        font-size:9px;
-        line-height:1.5;
-        margin:0;
-        white-space:nowrap;
-    }
-
-    #about .feature p{
-        display:none;
-    }
-}
-.hero{
-    background:var(--card-dark);
-}
-/* =====================================================
-   ABOUT - MOBILE FINAL
-===================================================== */
-
-@media(max-width:768px){
-
-    /* متن توضیحات درباره ما */
-    #about .about-text p{
-        width:100%;
-        font-size:9px;
-        line-height:2;
-        text-align:right;
-        margin-bottom:18px;
-    }
-
-    /* سه باکس در یک ردیف */
-    #about .features{
-        width:94%;
-        margin:0 auto;
-
-        display:grid !important;
-        grid-template-columns:repeat(3, 1fr) !important;
-
-        gap:8px;
-
-        align-items:stretch;
-    }
-
-    /* باکس‌ها */
-    #about .feature{
-        width:100%;
-        min-width:0;
-
-        padding:14px 5px;
-
-        min-height:65px;
-
-        border-radius:12px;
-
-        display:flex;
-        flex-direction:row;
-
-        align-items:center;
-        justify-content:center;
-
-        gap:6px;
-    }
-
-    /* آیکون */
-    #about .feature i{
-        font-size:21px;
-        margin:0;
-
-        flex-shrink:0;
-    }
-
-    /* عنوان باکس */
-    #about .feature h3{
-        font-size:9px;
-
-        line-height:1.5;
-
-        margin:0;
-
-        white-space:nowrap;
-    }
-
-    /* توضیحات داخل باکس‌ها مخفی */
-    #about .feature p{
-        display:none;
-    }
-}
-
-
-/* =====================================================
-   ABOUT - SMALL MOBILE
-===================================================== */
-
-@media(max-width:500px){
-
-    #about .about-text p{
-        font-size:8px;
-        line-height:2;
-        text-align:right;
-    }
-
-    #about .features{
-        width:95%;
-        gap:6px;
-    }
-
-    #about .feature{
-        padding:11px 4px;
-        min-height:58px;
-
-        gap:4px;
-
-        border-radius:10px;
-    }
-
-    #about .feature i{
-        font-size:18px;
-    }
-
-    #about .feature h3{
-        font-size:8px;
-    }
-}
-
-
-/* =====================================================
-   ABOUT - VERY SMALL MOBILE
-===================================================== */
-
-@media(max-width:360px){
-
-    #about .features{
-        width:96%;
-        gap:5px;
-    }
-
-    #about .feature{
-        padding:9px 3px;
-        min-height:52px;
-        gap:3px;
-    }
-
-    #about .feature i{
-        font-size:16px;
-    }
-
-    #about .feature h3{
-        font-size:7px;
-    }
-
-    #about .about-text p{
-        font-size:8px;
-        text-align:right;
-    }
-}
-/* =====================================================
-   ABOUT BOXES - FORCE 3 IN ONE ROW ON MOBILE
-===================================================== */
-
-@media (max-width:768px){
-
-    #about .features{
-        width:94% !important;
-        margin:0 auto !important;
-
-        display:flex !important;
-        flex-direction:row !important;
-        flex-wrap:nowrap !important;
-
-        gap:7px !important;
-    }
-
-    #about .feature{
-        flex:1 1 0 !important;
-        width:auto !important;
-        min-width:0 !important;
-
-        padding:12px 4px !important;
-
-        min-height:58px !important;
-        height:58px !important;
-
-        border-radius:11px !important;
-
-        display:flex !important;
-        flex-direction:row !important;
-
-        align-items:center !important;
-        justify-content:center !important;
-
-        gap:4px !important;
-    }
-
-    /* آیکون‌ها */
-    #about .feature i{
-        font-size:18px !important;
-        margin:0 !important;
-
-        flex-shrink:0 !important;
-    }
-
-    /* عنوان‌ها */
-    #about .feature h3{
-        font-size:8px !important;
-        line-height:1.5 !important;
-
-        margin:0 !important;
-
-        white-space:nowrap !important;
-    }
-
-    /* توضیحات داخل باکس‌ها */
-    #about .feature p{
-        display:none !important;
-    }
-}
-
-
-/* =====================================================
-   SMALL MOBILE
-===================================================== */
-
-@media (max-width:500px){
-
-    #about .features{
-        width:95% !important;
-        gap:5px !important;
-    }
-
-    #about .feature{
-        height:52px !important;
-        min-height:52px !important;
-
-        padding:9px 3px !important;
-
-        gap:3px !important;
-    }
-
-    #about .feature i{
-        font-size:16px !important;
-    }
-
-    #about .feature h3{
-        font-size:7px !important;
-    }
-}
-
-
-/* =====================================================
-   VERY SMALL MOBILE
-===================================================== */
-
-@media (max-width:360px){
-
-    #about .features{
-        width:97% !important;
-        gap:4px !important;
-    }
-
-    #about .feature{
-        height:48px !important;
-        min-height:48px !important;
-
-        padding:7px 2px !important;
-    }
-
-    #about .feature i{
-        font-size:14px !important;
-    }
-
-    #about .feature h3{
-        font-size:6.5px !important;
-    }
-}
-/* =========================================
-   ABOUT FEATURES - MOBILE ONE ROW
-========================================= */
-
-@media (max-width: 768px){
-
-    #about .features{
-        width:94% !important;
-        margin:0 auto !important;
-
-        display:flex !important;
-        flex-direction:row !important;
-        flex-wrap:nowrap !important;
-
-        gap:6px !important;
-    }
-
-    #about .feature{
-        width:calc((100% - 12px) / 3) !important;
-        min-width:0 !important;
-        flex:1 1 0 !important;
-
-        height:55px !important;
-        min-height:55px !important;
-
-        padding:5px 3px !important;
-
-        display:flex !important;
-        flex-direction:row !important;
-
-        align-items:center !important;
-        justify-content:center !important;
-
-        gap:4px !important;
-
-        overflow:hidden !important;
-    }
-
-    #about .feature i{
-        font-size:17px !important;
-        margin:0 !important;
-        flex-shrink:0 !important;
-    }
-
-    #about .feature h3{
-        font-size:8px !important;
-        margin:0 !important;
-
-        white-space:nowrap !important;
-        overflow:hidden !important;
-        text-overflow:clip !important;
-    }
-
-    #about .feature p{
-        display:none !important;
     }
 }

@@ -828,3 +828,24 @@
         font-size:8px;
     }
 }
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    flex-shrink:0;
+}
+
+.logo img{
+    width:65px;
+    height:65px;
+    object-fit:contain;
+}
+
+.logo-text h2{
+    font-size:38px;
+    color:var(--text);
+}
+
+.logo-text span{
+    color:var(--primary);
+}
